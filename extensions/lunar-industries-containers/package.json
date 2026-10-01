@@ -1,6 +1,6 @@
 {
   "name": "@bidule/ext-lunar-industries-containers",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Les conteneurs Docker et Podman, version Lunar Industries : projets Compose encadrés, sélection et actions groupées, ressources, et la fiche d'un conteneur (journaux suivis, statistiques, fichiers)",
   "type": "module",

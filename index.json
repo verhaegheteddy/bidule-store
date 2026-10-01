@@ -856,6 +856,24 @@
               "signature": "5RQMarepLIfE8/tNXV77brN80RG1SI1BNqvBi9j2UOOnbwFSvu1ruIUqCXjqyqHYwfywqzuUZ4TPkcV24YZIDQ=="
             }
           }
+        },
+        "0.1.10": {
+          "engine": "^0.1.4",
+          "dependencies": {},
+          "permissions": [
+            "shell"
+          ],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/terminal-0.1.10/terminal-0.1.10.tgz",
+              "size": 1784001,
+              "sha256": "37db157bacedf608136d7fe828c679ed22642c7fd2428cd883cd895771704d15",
+              "signature": "xfO0z5A+RBWai3S8mkDia48rWlmaytwwPwiRFUCYWEvc8y/06Yg9aFmjQ4vCbwxV2fNPTUnzJDPpOukSdPJ8DQ=="
+            }
+          }
         }
       }
     },

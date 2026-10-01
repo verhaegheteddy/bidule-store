@@ -7,6 +7,7 @@ import {
   openDialog,
   react,
   useHint,
+  useCardActions,
   useKanbanParts,
   useKanbanRevision,
   useOn,
@@ -100,6 +101,8 @@ export function Kanban() {
   const [git, setGit] = useBranches()
   const values = useSettingValues()
   const contributions = useKanbanParts()
+  // The actions of the card whose menu is open, by its task's group (an extension may offer some only on tasks to do).
+  const actionsFor = useCardActions(contributions.actions)
   useKanbanRevision()
   const [toggled, setToggled] = useState(savedToggles)
   const [trayOpen, setTrayOpen] = useState(() => saved(TRAY) !== 'false')
@@ -386,7 +389,7 @@ export function Kanban() {
         <CardMenu
           {...menu}
           source={board.source}
-          actions={contributions.actions}
+          actions={actionsFor(board.columns.find((c) => c.name === menu.task.status)?.group ?? null)}
           link={git.available ? () => chooseBranches(menu.task) : null}
           columns={columns.map((c) => ({ name: c.name, label: columnLabel(c.name) }))}
           move={(status) => void move(menu.task, status)}

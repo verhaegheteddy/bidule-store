@@ -1,6 +1,6 @@
 {
   "id": "lunar-industries-claude",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "title": "Lunar Industries - Claude",
   "engine": "^0.1.1",
   "permissions": [
@@ -37,11 +37,16 @@
       "actions": [
         {
           "command": "lunar-industries-claude.startTask",
-          "title": "Démarrer…"
+          "title": "Démarrer…",
+          "setting": "lunar-industries-claude.enabled",
+          "groups": [
+            "todo"
+          ]
         },
         {
           "command": "lunar-industries-claude.newSession",
-          "title": "Session Claude…"
+          "title": "Session Claude…",
+          "setting": "lunar-industries-claude.enabled"
         }
       ]
     },

@@ -1,0 +1,50 @@
+# The Flatpak repo of Bidule, on this repo's GitHub Pages: when the app's release `vX.Y.Z` is published (by the
+# app's CI), its .flatpak becomes the repo's latest version, signed, and the site is deployed again. Linux desktops
+# then update Bidule like any other Flatpak. By hand: Actions › Flatpak › Run workflow, with a release's tag.
+#
+# Secret: FLATPAK_GPG_KEY (the repo's GPG key, armored). Pages: source « GitHub Actions ».
+name: Flatpak
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release de l’app (vX.Y.Z)'
+        required: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  repo:
+    # The app's releases only (vX.Y.Z), not the extensions' (<id>-<version>).
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.event.release.tag_name, 'v')
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}flatpak/bidule.flatpakref
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y flatpak ostree
+      - name: The release's Flatpak
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+        run: gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern '*.flatpak' --dir dist
+      - name: The signed repo
+        env:
+          FLATPAK_GPG_KEY: ${{ secrets.FLATPAK_GPG_KEY }}
+        run: sh scripts/flatpak-repo.sh dist/*.flatpak site https://verhaegheteddy.github.io/bidule-store
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4

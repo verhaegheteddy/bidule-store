@@ -3,7 +3,7 @@
   "extensions": {
     "claude": {
       "title": "Claude Code",
-      "description": "Claude Code sur une tâche : ses branches en worktrees, le mode plan dans le terminal, le plan publié",
+      "description": "Claude Code sur une t\u00e2che : ses branches en worktrees, le mode plan dans le terminal, le plan publi\u00e9",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -27,7 +27,7 @@
     },
     "containers": {
       "title": "Conteneurs",
-      "description": "Conteneurs Docker et Podman : les voir, les démarrer, les arrêter, un shell ou leurs logs dans le terminal",
+      "description": "Conteneurs Docker et Podman : les voir, les d\u00e9marrer, les arr\u00eater, un shell ou leurs logs dans le terminal",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -51,7 +51,7 @@
     },
     "git": {
       "title": "git",
-      "description": "Dépôts git locaux : branches des tâches, activité, création et bascule de branche",
+      "description": "D\u00e9p\u00f4ts git locaux : branches des t\u00e2ches, activit\u00e9, cr\u00e9ation et bascule de branche",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -71,7 +71,7 @@
     },
     "github": {
       "title": "GitHub",
-      "description": "GitHub : pull requests et CI des branches hébergées sur GitHub",
+      "description": "GitHub : pull requests et CI des branches h\u00e9berg\u00e9es sur GitHub",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -93,7 +93,7 @@
     },
     "gitlab": {
       "title": "GitLab",
-      "description": "GitLab : merge requests et pipelines des branches hébergées sur GitLab",
+      "description": "GitLab : merge requests et pipelines des branches h\u00e9berg\u00e9es sur GitLab",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -115,7 +115,7 @@
     },
     "mascot-boo": {
       "title": "Boo",
-      "description": "Boo : Fantôme d’Halloween · thème Halloween",
+      "description": "Boo : Fant\u00f4me d\u2019Halloween \u00b7 th\u00e8me Halloween",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -135,7 +135,7 @@
     },
     "mascot-cannelle": {
       "title": "Cannelle",
-      "description": "Cannelle : Renne de Noël · thème Noël",
+      "description": "Cannelle : Renne de No\u00ebl \u00b7 th\u00e8me No\u00ebl",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -155,7 +155,7 @@
     },
     "mascot-capy": {
       "title": "Capy",
-      "description": "Capy : Capybara zen · thème onsen",
+      "description": "Capy : Capybara zen \u00b7 th\u00e8me onsen",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -175,7 +175,7 @@
     },
     "mascot-coincoin": {
       "title": "Coincoin",
-      "description": "Coincoin : Canard de débug · thème pixel art",
+      "description": "Coincoin : Canard de d\u00e9bug \u00b7 th\u00e8me pixel art",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -195,7 +195,7 @@
     },
     "mascot-dragon": {
       "title": "Drakko",
-      "description": "Drakko : Dragon grognon · thème nuit",
+      "description": "Drakko : Dragon grognon \u00b7 th\u00e8me nuit",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -215,7 +215,7 @@
     },
     "mascot-kenji": {
       "title": "Kenji",
-      "description": "Kenji : Shiba samouraï · thème jardin japonais",
+      "description": "Kenji : Shiba samoura\u00ef \u00b7 th\u00e8me jardin japonais",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -235,7 +235,7 @@
     },
     "mascot-mako": {
       "title": "Mako",
-      "description": "Mako : Requin pirate · thème tempête",
+      "description": "Mako : Requin pirate \u00b7 th\u00e8me temp\u00eate",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -255,7 +255,7 @@
     },
     "mascot-nox": {
       "title": "Nox",
-      "description": "Nox : Raton laveur hacker · thème datacenter",
+      "description": "Nox : Raton laveur hacker \u00b7 th\u00e8me datacenter",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -275,7 +275,7 @@
     },
     "mascot-octo": {
       "title": "Octo",
-      "description": "Octo : Pieuvre codeuse · thème abysses",
+      "description": "Octo : Pieuvre codeuse \u00b7 th\u00e8me abysses",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -295,7 +295,7 @@
     },
     "mascot-pip": {
       "title": "Pip",
-      "description": "Pip : Pingouin du gel du code · thème banquise",
+      "description": "Pip : Pingouin du gel du code \u00b7 th\u00e8me banquise",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -315,7 +315,7 @@
     },
     "mascot-robot": {
       "title": "Omni",
-      "description": "Omni : IA suzeraine · thème néon",
+      "description": "Omni : IA suzeraine \u00b7 th\u00e8me n\u00e9on",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -335,7 +335,7 @@
     },
     "mascot-sprout": {
       "title": "Sprout",
-      "description": "Sprout : Escargot jardinier · thème serre",
+      "description": "Sprout : Escargot jardinier \u00b7 th\u00e8me serre",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -355,7 +355,7 @@
     },
     "matrix": {
       "title": "Matrix",
-      "description": "Messagerie Matrix chiffrée : conversations, conversations de tâche, clins d'œil, visios",
+      "description": "Messagerie Matrix chiffr\u00e9e : conversations, conversations de t\u00e2che, clins d'\u0153il, visios",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -375,7 +375,7 @@
     },
     "notion": {
       "title": "Notion",
-      "description": "Tâches Notion : la source du Kanban (rôle tasks)",
+      "description": "T\u00e2ches Notion : la source du Kanban (r\u00f4le tasks)",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -395,7 +395,7 @@
     },
     "temps": {
       "title": "Temps",
-      "description": "Temps : la journée reconstituée depuis git et la source de tâches, envoyée au Time Log",
+      "description": "Temps : la journ\u00e9e reconstitu\u00e9e depuis git et la source de t\u00e2ches, envoy\u00e9e au Time Log",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -437,7 +437,7 @@
     },
     "lunar-industries-containers": {
       "title": "Lunar Industries - Conteneurs",
-      "description": "Les conteneurs Docker et Podman, version Lunar Industries : projets Compose encadrés, sélection et actions groupées, ressources, et la fiche d'un conteneur (journaux suivis, statistiques, fichiers)",
+      "description": "Les conteneurs Docker et Podman, version Lunar Industries : projets Compose encadr\u00e9s, s\u00e9lection et actions group\u00e9es, ressources, et la fiche d'un conteneur (journaux suivis, statistiques, fichiers)",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.1",
@@ -445,6 +445,8 @@
           "permissions": [
             "shell"
           ],
+          "kind": "modules",
+          "unofficial": true,
           "released": "2026-10-01",
           "packages": {
             "any": {

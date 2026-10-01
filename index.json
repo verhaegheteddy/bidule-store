@@ -999,21 +999,21 @@
           "packages": {
             "linux-x64": {
               "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/lunar-industries-claude-0.1.1/lunar-industries-claude-0.1.1-linux-x64.tgz",
-              "size": 115954721,
-              "sha256": "3565988b81ff5b26073567ac195695c4410df7c63d33245be722a0e431814e38",
-              "signature": "VFbFTUK9Ti4FdRCPaXR6YI7lAtLvLGaOVXUtrrc2loqbvdHZ16IFeBlGDtXW5HIgrp0iKxJjB5aCRM9x5/yrDA=="
+              "size": 115954265,
+              "sha256": "886215e0ad9ee335ee1d89fd5d1ed86d80d1a505e54d19ea2ffff8cd4e72893c",
+              "signature": "bTcTm3GL86KbTkGIldljEuTGnIkAoLdZwenMO2Duy1iAKDh25VG5EMulADev9FAZEQLn8ubIX4qmiVcVDnM4Dw=="
             },
             "win32-x64": {
               "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/lunar-industries-claude-0.1.1/lunar-industries-claude-0.1.1-win32-x64.tgz",
-              "size": 118809799,
-              "sha256": "c4df4a69f7830ee2b00aeb9d693de45fbb64e8f60a40fadaf141c6fff205de3b",
-              "signature": "1fSAdpXaNIJoGawQPoEKpXut0MrgpxNT9ZSVCaWYxhNPEk8zpkIqwgJOiqY60D4JImqYFjJYX7lmTTVNVKU/AA=="
+              "size": 118809939,
+              "sha256": "18315d8968af5d26c81dcdd13fc550904219378cb9391caadfab3c6e945f6bb8",
+              "signature": "Zud5ci3GbqNjwkRubh0MAvBViLtPW+5p6+Z59Cfv14J7d8+G4ZqIxKIMiMjE9U1F+lwoX5Qs+xCMZiz5cjVdDA=="
             },
             "darwin-arm64": {
               "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/lunar-industries-claude-0.1.1/lunar-industries-claude-0.1.1-darwin-arm64.tgz",
-              "size": 106110206,
-              "sha256": "e39f6519f50bb1733b0203612930678756fe7d939cacea501a937380f7cf92e7",
-              "signature": "NObp1TW74L9aAdzxLgsIijBoCKZkR9r7gucOw/bOyMmMmBVu2YNBhzBNWFr7NC/rLHhdXzo0Oqo2NKyEl12NAQ=="
+              "size": 106109694,
+              "sha256": "8d27ef34aba51a41377a0990581d71c6cb3691467aa44b7974277cdd8a535381",
+              "signature": "wxBkMNJl8BKoqlMnHxLZ3YFBzRoHGz6Pb9QDvwam1Y2MDvJR63jstISbP2EkouNhz4K6ewoVLbgzXf/cGGk7DQ=="
             }
           }
         }

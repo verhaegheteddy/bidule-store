@@ -1,7 +1,7 @@
 # Bidule : le store
 
 Ce dépôt public distribue [Bidule](https://github.com/verhaegheteddy/bidule) : les paquets et l'index viennent de
-la CI de l'app ; seules les sources des modules non officiels (`extensions/`) s'écrivent ici.
+la CI de l'app ; seules les sources des modules communautaires (`extensions/`) s'écrivent ici.
 
 - **L'app** : les releases `vX.Y.Z` (installateurs Windows et macOS, Flatpak). L'app y cherche ses mises à jour.
 - **Linux** : `flatpak install --user https://verhaegheteddy.github.io/bidule-store/flatpak/bidule.flatpakref`
@@ -9,7 +9,13 @@ la CI de l'app ; seules les sources des modules non officiels (`extensions/`) s'
 - **Les extensions** : `index.json` et leurs paquets signés, dans les releases `<id>-<version>`. L'app les installe
   depuis Réglages › Extensions.
 
-## Les modules non officiels
+## Créer votre propre store
+
+Bidule accepte d'autres stores que celui-ci (Réglages › Extensions › Stores) : un `index.json`, des paquets signés
+avec votre clé. Le guide : [docs/creer-un-store.md](docs/creer-un-store.md) ; l'outil qui signe et indexe un paquet :
+`tools/sign-package.mjs` (Node seul).
+
+## Les modules communautaires
 
 `extensions/<id>` : les sources des modules qui concurrencent les officiels (Kanban, Branches, Temps, Claude,
 Conteneurs…), sur le même modèle qu'une extension de Bidule, avec leur propre id et `"bidule": { "storeOnly": true }`

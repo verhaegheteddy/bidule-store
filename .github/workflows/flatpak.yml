@@ -18,15 +18,26 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  actions: write
 
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
+  # GitHub Pages deploys from the default branch only (the github-pages environment's rule): a release's event runs
+  # on its tag, so it starts this workflow again on main, for that release.
+  relay:
+    if: github.event_name == 'release' && startsWith(github.event.release.tag_name, 'v')
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name }}
+        run: gh workflow run flatpak.yml --repo "$GITHUB_REPOSITORY" --ref main -f tag="$TAG"
+
   repo:
-    # The app's releases only (vX.Y.Z), not the extensions' (<id>-<version>).
-    if: github.event_name == 'workflow_dispatch' || startsWith(github.event.release.tag_name, 'v')
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -37,7 +48,7 @@ jobs:
       - name: The release's Flatpak
         env:
           GH_TOKEN: ${{ github.token }}
-          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+          TAG: ${{ inputs.tag }}
         run: gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern '*.flatpak' --dir dist
       - name: The signed repo
         env:

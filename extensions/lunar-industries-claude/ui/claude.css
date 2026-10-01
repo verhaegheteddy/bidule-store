@@ -1,0 +1,825 @@
+/* Lunar Industries - Claude (Simon's pages/claude), every class under `lc-`. Colours are the theme's. */
+
+:where([class*='theme-']) {
+  --lc-warn-bg: color-mix(in srgb, var(--butter) 28%, var(--card));
+  --lc-warn-ink: color-mix(in srgb, var(--butter) 45%, var(--text));
+  --lc-bad-bg: color-mix(in srgb, var(--bad-ink) 16%, var(--card));
+  --lc-info-bg: color-mix(in srgb, var(--blue) 24%, var(--card));
+}
+
+/* ---------- tags and small controls */
+.lc-tone-ok {
+  background: var(--ok-bg);
+  color: var(--ok-ink);
+}
+.lc-tone-warn {
+  background: var(--lc-warn-bg);
+  color: var(--lc-warn-ink);
+}
+.lc-tone-bad {
+  background: var(--lc-bad-bg);
+  color: var(--bad-ink);
+}
+.lc-tone-info {
+  background: var(--lc-info-bg);
+  color: var(--text);
+}
+.lc-tone-neutral {
+  background: var(--chip);
+  color: var(--text-2);
+}
+.btn.lc-btn-sm {
+  height: 32px;
+  padding: 0 var(--space-3);
+  font-size: var(--fs-sm);
+}
+.icon-btn.lc-icon-sm {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+.icon-btn.lc-icon-xs {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+.lc-select {
+  height: 32px;
+  max-width: 180px;
+  padding: 0 var(--space-2);
+  border: 2px solid var(--card-line);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  color: var(--text);
+  font:
+    600 var(--fs-sm) 'Nunito',
+    sans-serif;
+}
+.lc-textarea {
+  padding: var(--space-2) var(--space-3);
+  border: 2px solid var(--card-line);
+  border-radius: var(--radius-md);
+  background: var(--bg);
+  color: var(--text);
+  font:
+    600 var(--fs-sm) 'Nunito',
+    sans-serif;
+  line-height: 1.55;
+  resize: vertical;
+}
+.lc-menu-icon {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* A disclosure: its summary is a row with a chevron that turns when open. */
+.lc-disclosure > summary {
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  list-style: none;
+  cursor: pointer;
+  font-size: var(--fs-xs);
+  color: var(--text-2);
+}
+.lc-disclosure > summary::-webkit-details-marker {
+  display: none;
+}
+.lc-disclosure > summary::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  margin: 0 var(--space-1);
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 0.12s ease;
+}
+.lc-disclosure[open] > summary::before {
+  transform: rotate(45deg);
+}
+.lc-disclosure > summary:hover {
+  background: var(--chip);
+}
+.lc-disclosure > summary:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: -2px;
+}
+
+/* ---------- the page: three columns, each scrolling on its own */
+.page.fill.lc-page {
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 480px;
+}
+.page.fill.lc-page > .panel {
+  flex: 0 0 auto;
+}
+.page.fill.lc-page > .lc-none {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.lc-page .panel {
+  min-height: 0;
+}
+.lc-list {
+  width: 300px;
+  gap: var(--space-3);
+  padding: var(--space-4);
+}
+.lc-list h2 {
+  margin: 0;
+  font-size: var(--fs-xl);
+}
+.lc-search input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 38px;
+  padding: 0 var(--space-3);
+  border: 2px solid var(--card-line);
+  border-radius: var(--radius-pill);
+  background: var(--bg);
+  color: var(--text);
+  font:
+    600 var(--fs-sm) 'Nunito',
+    sans-serif;
+}
+.lc-groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-height: 0;
+  overflow: auto;
+}
+.lc-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.lc-group-title {
+  padding: var(--space-2) var(--space-2) var(--space-1);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.lc-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 48px;
+  padding: var(--space-1) var(--space-3);
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+.lc-item:hover {
+  background: var(--chip);
+}
+/* In a list that scrolls, the ring is drawn inside: outside, the scrolling would cut it. */
+.lc-item:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: -2px;
+}
+.lc-item[aria-selected='true'] {
+  background: var(--chip-hover);
+  border-color: var(--card-line);
+}
+/* A session held up by a decision, told by the row's own background: the list is read to find what needs the user. */
+.lc-item[data-status='waiting'] {
+  background: var(--lc-warn-bg);
+}
+.lc-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  font-size: var(--fs-sm);
+}
+.lc-when {
+  flex-shrink: 0;
+}
+.lc-archived {
+  align-self: flex-start;
+}
+
+/* The folded strip: the state stays a dot. */
+.lc-rail {
+  width: 56px;
+  box-sizing: border-box;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) 0;
+  overflow: auto;
+  scrollbar-width: none;
+}
+.lc-rail > button {
+  flex-shrink: 0;
+}
+.lc-rail-item {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  background: transparent;
+}
+.lc-rail-item:hover {
+  background: var(--chip-hover);
+}
+.lc-rail-item[aria-pressed='true'] {
+  background: var(--chip);
+  border-color: var(--card-line);
+}
+.lc-rail-item:focus-visible {
+  outline: 2px solid var(--ring);
+}
+.lc-dot {
+  width: 10px;
+  height: 10px;
+  box-sizing: border-box;
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--text-off);
+}
+.lc-dot[data-status='waiting'] {
+  background: var(--lc-warn-ink);
+  border-color: var(--lc-warn-ink);
+}
+.lc-dot[data-status='running'] {
+  border-color: var(--blue);
+}
+
+/* ---------- the conversation: a header, the lines drawn from their end, the message box */
+.lc-conv {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: 2px solid var(--card-line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.lc-conv-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 2px solid var(--card-line);
+}
+.lc-conv-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.lc-conv-title-line {
+  gap: var(--space-2);
+  min-width: 0;
+}
+.lc-conv-title h1 {
+  margin: 0;
+  font-size: var(--fs-xl);
+  line-height: 1.2;
+}
+.lc-conv-ref {
+  flex-shrink: 0;
+  font-size: var(--fs-xs);
+  color: var(--text-2);
+  white-space: nowrap;
+}
+.lc-conv-repos {
+  gap: var(--space-1);
+}
+.lc-conv-status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+/* While Claude works, a dot of the tag's colour that pulses. */
+.lc-working {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: currentColor;
+  animation: lcPulse 1.2s ease-in-out infinite;
+}
+@keyframes lcPulse {
+  50% {
+    opacity: 0.25;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lc-working {
+    animation: none;
+  }
+}
+
+/* column-reverse keeps the end in view as lines come, unless the user scrolled up. */
+.lc-log {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: var(--space-4) var(--space-5);
+}
+.lc-lines {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+}
+.lc-conv.focus .lc-lines,
+.lc-conv.focus .lc-compose {
+  max-width: 1040px;
+}
+.lc-user {
+  align-self: flex-end;
+  max-width: 80%;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md) var(--radius-md) 4px var(--radius-md);
+  background: var(--chip);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* Claude's Markdown, as HTML. */
+.lc-text {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.lc-text > :first-child {
+  margin-top: 0;
+}
+.lc-text > :last-child {
+  margin-bottom: 0;
+}
+.lc-text :is(p, ul, ol, blockquote, pre, table) {
+  margin: 0 0 var(--space-2);
+}
+.lc-text :is(h1, h2, h3, h4) {
+  margin: var(--space-3) 0 var(--space-1);
+  line-height: 1.3;
+}
+.lc-text h1 {
+  font-size: var(--fs-xl);
+}
+.lc-text h2 {
+  font-size: var(--fs-lg);
+}
+.lc-text :is(h3, h4) {
+  font-size: var(--fs-md);
+}
+.lc-text :is(ul, ol) {
+  padding-left: var(--space-5);
+}
+.lc-text li + li {
+  margin-top: 2px;
+}
+.lc-text code {
+  padding: 0 var(--space-1);
+  border-radius: 4px;
+  background: var(--chip);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--fs-xs);
+}
+.lc-text pre {
+  padding: var(--space-2) var(--space-3);
+  overflow: auto;
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+}
+.lc-text pre code {
+  padding: 0;
+  background: none;
+}
+.lc-text blockquote {
+  padding-left: var(--space-3);
+  border-left: 2px solid var(--card-line);
+  color: var(--text-2);
+}
+.lc-text table {
+  border-collapse: collapse;
+}
+.lc-text :is(th, td) {
+  padding: var(--space-1) var(--space-2);
+  border: 2px solid var(--card-line);
+  text-align: left;
+}
+.lc-text a {
+  color: var(--accent-text);
+}
+.lc-text hr {
+  border: none;
+  border-top: 2px solid var(--card-line);
+}
+
+.lc-info {
+  align-self: center;
+  padding: 2px var(--space-3);
+  border-radius: var(--radius-pill);
+  background: var(--bg);
+  text-align: center;
+}
+.lc-error {
+  margin: 0;
+  color: var(--bad-ink);
+  font-weight: 700;
+  white-space: pre-wrap;
+}
+
+/* ---------- tool calls */
+.lc-tools-line,
+.lc-call {
+  display: flex;
+  flex-direction: column;
+}
+.lc-tools-body {
+  display: flex;
+  flex-direction: column;
+  padding-left: var(--space-4);
+}
+.lc-call-name {
+  min-width: 40px;
+  font-weight: 800;
+  color: var(--text);
+}
+.lc-call-output {
+  margin: 2px 0 var(--space-2) var(--space-6);
+  padding: var(--space-2) var(--space-3);
+  max-height: 160px;
+  overflow: auto;
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  font-size: var(--fs-xs);
+  color: var(--text-2);
+  white-space: pre-wrap;
+}
+.lc-diff {
+  margin: 2px 0 var(--space-2);
+  border: 2px solid var(--card-line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.lc-diff-head {
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 2px solid var(--card-line);
+  font-size: var(--fs-xs);
+}
+.lc-diff-body {
+  margin: 0;
+  padding: var(--space-2) 0;
+  max-height: 240px;
+  overflow: auto;
+  font-size: var(--fs-xs);
+  line-height: 1.65;
+}
+.lc-diff-line {
+  display: block;
+  padding: 0 var(--space-3);
+  white-space: pre;
+}
+.lc-diff-line.added {
+  background: var(--ok-bg);
+}
+.lc-diff-line.removed {
+  background: var(--lc-bad-bg);
+}
+
+/* ---------- decision cards: the warning's colours; the main button is the page's only coral one */
+.lc-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: 2px solid var(--lc-warn-ink);
+  border-radius: var(--radius-md);
+  background: var(--lc-warn-bg);
+}
+.lc-card > strong {
+  color: var(--lc-warn-ink);
+}
+.lc-command,
+.lc-plan {
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  font-size: var(--fs-xs);
+  white-space: pre-wrap;
+}
+.lc-plan {
+  font-family: inherit;
+  font-size: var(--fs-sm);
+  white-space: normal;
+}
+.lc-question {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.lc-choices {
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.lc-decided {
+  gap: var(--space-2);
+  font-size: var(--fs-xs);
+  color: var(--text-2);
+}
+
+/* ---------- the message box */
+.lc-compose {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-4) var(--space-4);
+  box-sizing: border-box;
+}
+.lc-to-end {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%);
+  background: var(--card);
+}
+/* The field and its bar make one box, whose border takes the focus ring while the text has the focus. */
+.lc-box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: 2px solid var(--card-line);
+  border-radius: var(--radius-md);
+  background: var(--bg);
+}
+.lc-box:focus-within {
+  border-color: var(--ring);
+}
+.lc-field {
+  display: flex;
+}
+/* Grows with the text, up to a height, then scrolls. */
+.lc-field textarea {
+  flex: 1;
+  field-sizing: content;
+  min-height: 1.5em;
+  max-height: 200px;
+  border: none;
+  outline: none;
+  resize: none;
+  background: transparent;
+  font:
+    600 var(--fs-sm) 'Nunito',
+    sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+}
+.lc-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.lc-send {
+  width: 36px;
+  height: 36px;
+}
+.lc-send.ready {
+  background: var(--coral);
+  color: var(--on-coral);
+}
+.lc-attached {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.lc-attachment {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  max-width: 240px;
+  padding: 2px 2px 2px var(--space-2);
+  border-radius: var(--radius-pill);
+  background: var(--chip);
+  font-size: var(--fs-xs);
+  color: var(--text-2);
+}
+/* The skills' descriptions are long sentences: the list keeps a reading width. */
+.menu.lc-commands {
+  width: 480px;
+  max-width: calc(100vw - 2 * var(--space-4));
+  max-height: min(440px, 60vh);
+  overflow-y: auto;
+}
+.lc-command-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+/* ---------- the context, on the right */
+.lc-context {
+  width: 280px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  overflow: auto;
+}
+.lc-ctx-panel {
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+}
+.lc-ctx-title {
+  margin: 0;
+  font-family: inherit;
+  font-size: var(--fs-xs);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-off);
+}
+.lc-ctx-task {
+  font-size: var(--fs-sm);
+  line-height: 1.35;
+}
+.lc-ctx-link {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--accent-text);
+}
+.lc-ctx-worktree {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: var(--fs-sm);
+}
+.lc-ctx-path {
+  font-size: var(--fs-xs);
+  color: var(--mono);
+}
+.lc-ctx-line {
+  gap: var(--space-2);
+  font-size: var(--fs-xs);
+}
+.lc-added {
+  font-weight: 700;
+  color: var(--ok-ink);
+}
+.lc-removed {
+  font-weight: 700;
+  color: var(--bad-ink);
+}
+.lc-task-field select {
+  width: 100%;
+}
+
+/* ---------- off, first visit */
+.lc-off {
+  max-width: 720px;
+}
+.lc-off h2 {
+  margin: 0;
+}
+.lc-empty {
+  max-width: 880px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.lc-empty-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+.lc-empty-head p {
+  margin: 0;
+}
+.lc-empty-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+  align-items: start;
+}
+.lc-empty-grid h2 {
+  margin: 0;
+  font-size: var(--fs-xl);
+}
+.lc-check {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+.lc-check-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  font-size: var(--fs-sm);
+}
+.lc-task {
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+}
+
+/* ---------- the new session window */
+.lc-new {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-height: calc(100vh - 2 * var(--space-6));
+}
+.lc-new-head h2 {
+  margin: 0 0 var(--space-1);
+}
+.lc-new-head p {
+  margin: 0;
+}
+.lc-new-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  overflow: auto;
+  min-height: 0;
+  /* The focus ring of a field reaches outside it and a scrolling box clips it: room inside, taken back outside. */
+  padding: var(--space-1);
+  margin: calc(-1 * var(--space-1));
+}
+.lc-new-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.lc-new-section h3 {
+  margin: 0;
+  font-size: var(--fs-md);
+  font-weight: 800;
+}
+.lc-new-textarea {
+  min-height: 7.5em;
+  max-height: 22em;
+  field-sizing: content;
+}
+.lc-new-settings {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+/* ---------- settings */
+.lc-settings-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+.lc-settings-block h3 {
+  margin: 0;
+  font-size: var(--fs-md);
+}
+.lc-settings-block > p {
+  margin: 0;
+}
+.lc-repo > summary {
+  font-size: var(--fs-sm);
+  color: var(--text);
+}
+.lc-repo-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-2) 0 var(--space-3) var(--space-5);
+}
+.lc-repo-form > p {
+  margin: 0;
+}
+
+@media (max-width: 1100px) {
+  .lc-context {
+    width: 240px;
+  }
+  .lc-list {
+    width: 260px;
+  }
+}

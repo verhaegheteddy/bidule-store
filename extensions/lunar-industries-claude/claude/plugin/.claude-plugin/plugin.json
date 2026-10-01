@@ -1,0 +1,6 @@
+{
+  "name": "workspace",
+  "version": "0.1.0",
+  "description": "La démarche de travail de l'équipe (de la tâche au staging, issue et MR, déploiements, changelog, commentaire au PO, worktrees), appuyée sur les outils de Bidule (module Lunar Industries - Claude).",
+  "author": { "name": "Lunar Industries" }
+}

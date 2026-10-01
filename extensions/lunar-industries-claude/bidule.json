@@ -1,0 +1,228 @@
+{
+  "id": "lunar-industries-claude",
+  "version": "0.1.0",
+  "title": "Lunar Industries - Claude",
+  "engine": "^0.1.1",
+  "permissions": [
+    "shell"
+  ],
+  "contributes": {
+    "requires": [
+      "git"
+    ],
+    "uses": [
+      "tasks"
+    ],
+    "pages": [
+      {
+        "id": "claude",
+        "path": "/lunar-industries/claude",
+        "title": "Claude",
+        "order": 40
+      }
+    ],
+    "commands": [
+      {
+        "id": "lunar-industries-claude.newSession",
+        "title": "Session Claude…",
+        "group": "Lunar Industries - Claude"
+      },
+      {
+        "id": "lunar-industries-claude.startTask",
+        "title": "Démarrer…",
+        "group": "Lunar Industries - Claude"
+      }
+    ],
+    "kanban": {
+      "actions": [
+        {
+          "command": "lunar-industries-claude.startTask",
+          "title": "Démarrer…"
+        },
+        {
+          "command": "lunar-industries-claude.newSession",
+          "title": "Session Claude…"
+        }
+      ]
+    },
+    "events": [
+      "lunar-industries-claude.sessions",
+      "lunar-industries-claude.session"
+    ],
+    "background": true,
+    "settings": {
+      "title": "Lunar Industries - Claude",
+      "panel": true,
+      "fields": [
+        {
+          "key": "lunar-industries-claude.enabled",
+          "type": "toggle",
+          "title": "Sessions Claude dans l’app (expérimental)",
+          "help": "Pilote Claude Code depuis l’application avec l’Agent SDK et ton compte Claude. Anthropic n’a pas explicitement approuvé cet usage d’un abonnement par une application tierce : à activer en connaissance de cause.",
+          "default": false
+        },
+        {
+          "key": "lunar-industries-claude.root",
+          "type": "text",
+          "title": "Racine de l’espace de travail",
+          "help": "Où démarrent les sessions et où vivent les verrous du créneau exécutable. Vide : le dossier que partagent les dépôts de la session, sinon le dossier personnel.",
+          "placeholder": "~/workspaces",
+          "default": ""
+        },
+        {
+          "key": "lunar-industries-claude.settingSources",
+          "type": "text",
+          "title": "Réglages chargés par une session",
+          "help": "Ceux de l’utilisateur, du dépôt, les locaux : user, project, local.",
+          "default": "user, project, local"
+        },
+        {
+          "key": "lunar-industries-claude.defaultMode",
+          "type": "choice",
+          "title": "Mode d’une nouvelle session",
+          "options": [
+            {
+              "value": "default",
+              "label": "Demander"
+            },
+            {
+              "value": "acceptEdits",
+              "label": "Accepter les modifications"
+            },
+            {
+              "value": "plan",
+              "label": "Plan"
+            },
+            {
+              "value": "auto",
+              "label": "Auto"
+            },
+            {
+              "value": "bypassPermissions",
+              "label": "Sans demander"
+            }
+          ],
+          "default": "default"
+        },
+        {
+          "key": "lunar-industries-claude.defaultModel",
+          "type": "text",
+          "title": "Modèle de la dernière session",
+          "default": "",
+          "hidden": true
+        },
+        {
+          "key": "lunar-industries-claude.defaultEffort",
+          "type": "text",
+          "title": "Effort de la dernière session",
+          "default": "",
+          "hidden": true
+        },
+        {
+          "key": "lunar-industries-claude.notify",
+          "type": "text",
+          "title": "Notifications",
+          "help": "decision (une décision attendue), turn (Claude a terminé), error, slot (le créneau est pris).",
+          "default": "decision, error, slot"
+        },
+        {
+          "key": "lunar-industries-claude.reviewTarget",
+          "type": "text",
+          "title": "Branche cible des MR",
+          "help": "Celle des dépôts qui n’en ont pas une à eux ; les nouvelles branches en partent.",
+          "default": ""
+        },
+        {
+          "key": "lunar-industries-claude.branchNaming",
+          "type": "choice",
+          "title": "Nommage des branches",
+          "options": [
+            {
+              "value": "issue",
+              "label": "{issue}-{slug} : une issue d’abord"
+            },
+            {
+              "value": "ref",
+              "label": "{ref}-{slug} : la référence de la tâche"
+            },
+            {
+              "value": "template",
+              "label": "Le modèle ci-dessous"
+            }
+          ],
+          "default": "issue"
+        },
+        {
+          "key": "lunar-industries-claude.branchTemplate",
+          "type": "text",
+          "title": "Modèle de nom de branche",
+          "help": "{issue}, {ref} et {slug}.",
+          "default": "{ref}-{slug}"
+        },
+        {
+          "key": "lunar-industries-claude.createIssue",
+          "type": "toggle",
+          "title": "Toujours créer une issue",
+          "help": "Même quand le nom de la branche n’en a pas besoin.",
+          "default": false
+        },
+        {
+          "key": "lunar-industries-claude.integrationBranches",
+          "type": "text",
+          "title": "Branches d’intégration",
+          "default": "main, master, develop"
+        },
+        {
+          "key": "lunar-industries-claude.stagingBranch",
+          "type": "text",
+          "title": "Branche de staging",
+          "default": ""
+        },
+        {
+          "key": "lunar-industries-claude.productionBranch",
+          "type": "text",
+          "title": "Branche de production",
+          "default": ""
+        },
+        {
+          "key": "lunar-industries-claude.stagingJob",
+          "type": "text",
+          "title": "Job de déploiement en staging",
+          "help": "{env} : l’environnement.",
+          "default": ""
+        },
+        {
+          "key": "lunar-industries-claude.productionJob",
+          "type": "text",
+          "title": "Job de déploiement en production",
+          "default": ""
+        },
+        {
+          "key": "lunar-industries-claude.stagingEnvs",
+          "type": "text",
+          "title": "Environnements de staging",
+          "default": ""
+        },
+        {
+          "key": "lunar-industries-claude.stagingEnv",
+          "type": "text",
+          "title": "Environnement de staging par défaut",
+          "default": ""
+        },
+        {
+          "key": "lunar-industries-claude.testStatus",
+          "type": "text",
+          "title": "Statut d’une tâche en test",
+          "default": ""
+        },
+        {
+          "key": "lunar-industries-claude.repos",
+          "type": "text",
+          "title": "Réglages par dépôt",
+          "default": "{}",
+          "hidden": true
+        }
+      ]
+    }
+  }
+}

@@ -22,6 +22,24 @@
               "signature": "C2euSWhrdD5fVfzLeBTKkTyFkcln9nyB+Yi1/JC2NDyxFBh2twUUdyVP1clb/3JJ/e2cNoU39AdldLBPXqq6Cg=="
             }
           }
+        },
+        "0.1.1": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [
+            "shell"
+          ],
+          "kind": "modules",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/claude-0.1.1/claude-0.1.1.tgz",
+              "size": 20975,
+              "sha256": "eb16cee910b8814d607342d9687be8ff2ca051234ffe6a2d34d280455304f97b",
+              "signature": "WsVgrzaWmJsrrQCfuH//E3mOM0FeS4b7Gxg04uCRhiWgCKvMNMVjvpbESc8Q/C50Z+3aIp7sZY03W3jV/b32Cg=="
+            }
+          }
         }
       }
     },
@@ -46,12 +64,30 @@
               "signature": "CkO/X/AXHabqdtbHaAyOKaSLE/WV7o8vXdOAlAwlxg+Bu6Q0PCck9dR0FEJX2ReAZBhz5eAKKWDaVjrQ3w9yAg=="
             }
           }
+        },
+        "0.1.1": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [
+            "shell"
+          ],
+          "kind": "modules",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/containers-0.1.1/containers-0.1.1.tgz",
+              "size": 17420,
+              "sha256": "4f14f2b6e5f15a8f55b287114e8f7e9b43c676e1be1d54a60431b9fac374c6c4",
+              "signature": "GhDGnct3VS8rvNSZuKtPKym+McdI9PehQl1JDb+L9gIiNwP1TOFyV+t8yXBJl1QV3Jllf1IuP2HDfIYnbjCZAw=="
+            }
+          }
         }
       }
     },
     "git": {
       "title": "git",
-      "description": "Dépôts git locaux : branches des tâches, activité, création et bascule de branche",
+      "description": "Dépôts git locaux : branches, activité, worktrees ; tient le rôle git",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -64,6 +100,22 @@
               "size": 22406,
               "sha256": "bfb216f236a7880061d5a9c6f7a3ec905942cdd900f77ec9d83de8afeb53faf3",
               "signature": "xM6GdEVO2SnmkUgByYKsoDJPjxUDUrvjK5gYEIkMFFmfUVxF2xbEERrddIPMJBvFhyMIRnu2rJ0E7QGGwWH8Ag=="
+            }
+          }
+        },
+        "0.2.0": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "providers",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/git-0.2.0/git-0.2.0.tgz",
+              "size": 12438,
+              "sha256": "68ffee5f926f205e834cdf7d769e120b5a916a3b687dc7068ade0d91aaf59a40",
+              "signature": "4vAiTjNWJ5KQRuI5bAXoRZrDrVQNkuf9imAhJe2T4DlZEq6G8igW6tgl9L20oRRE+fifSWsKnDJnZmGBYrGTBg=="
             }
           }
         }
@@ -88,6 +140,22 @@
               "signature": "ojybsbyfiUwrtsh4jE7EtwEDVflvinskHGhrBIRK6Wq2PIJ3MhUabNi7lZZ3S2Q1qAh/mtjutl1oDWm//I/uBQ=="
             }
           }
+        },
+        "0.1.1": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/github-0.1.1/github-0.1.1.tgz",
+              "size": 3555,
+              "sha256": "fea83d4be621105d8532845514a0ee71690a81d8e8448decd2bd4122982179c6",
+              "signature": "7fK8sM0Vkv4c6Bg1lNKSJZkfL516WSGXEev/OhlnHcG/KoVED6LDg1XcmzsyU2lxlhXhX10KDY3UH7no4SzSCw=="
+            }
+          }
         }
       }
     },
@@ -108,6 +176,22 @@
               "size": 1823,
               "sha256": "b07b0d6272458d1d9f4b6243aa62c4433b545c1832eeede5dd097ae586fd5cb1",
               "signature": "xnDbzbNf4ZCU4vy6Ykx3XWzReG8Y+41iIXRpRO26Ri27LpiWkfKLtSM4BLvT8JIBHnsc6juZ1VlTBaUtGX/ABQ=="
+            }
+          }
+        },
+        "0.1.1": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/gitlab-0.1.1/gitlab-0.1.1.tgz",
+              "size": 3298,
+              "sha256": "10173172e9bdaea57f4aa7cf306ea9315aac826e4e942f8ef75bf252f8cddad8",
+              "signature": "5pwltYNwaNq/cYpmnE2i68fBLEhumB3I9g4tSP+4CJgex5wUyJyCT8H/z0wUhnor4khF/TWxIETcHclkl+5CBQ=="
             }
           }
         }
@@ -370,6 +454,22 @@
               "signature": "Mn3ryrYfFjPUaf7p27GYx6BN8zJ7TEyMtVtk9+UD8yN01d1KydcsKNIkhNDlwjwM+NjOGSOkJnqAOnIpN7cHAw=="
             }
           }
+        },
+        "0.1.1": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "providers",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "linux-x64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/matrix-0.1.1/matrix-0.1.1-linux-x64.tgz",
+              "size": 10428609,
+              "sha256": "3f7a02965f7744fc632261b3c78049e8d5e2d7e0ec379a9ac3b0822c9e84ecb8",
+              "signature": "QkntGjeOBxZIsnG6o8Wki2QY3E+y8eQ0zoTG7jT8qseEjrJUVLnA3lIBVYISdnXs42fwEMTKaruTHpCFc4SYAg=="
+            }
+          }
         }
       }
     },
@@ -388,6 +488,22 @@
               "size": 6947,
               "sha256": "b457621d473549f39d7ae6b9d3b846c9847a27db8c9180b033c634068b289965",
               "signature": "M/nkTKpmACSBnDnHpl442nMUOLg+GcNFOOzvzUpWeCIYsvGTp1xy0VtBWZQVryG1pHSrrR3M9NJLIK85vshkAg=="
+            }
+          }
+        },
+        "0.1.1": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "providers",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/notion-0.1.1/notion-0.1.1.tgz",
+              "size": 7818,
+              "sha256": "012ede6bf869c20f4a617e46cb863d3047ceafb80274e8e4c3c0b1cc892c480e",
+              "signature": "Nw4aEJb+o3wLPtecH95o2SuFU2viZ2mDPPRy0rMZFI8IvyiuTNgJwVvkLpy7q1OAzZnh/FG0dg0WH4bDZfBjCA=="
             }
           }
         }
@@ -412,6 +528,22 @@
               "signature": "n2j9fjUj+bneSB/7eXrsGYzeibaOrSaKHMy2uYhm0akRnbgcxYUDU1BmLLsMuRLLRaku4n1lRckCQXVaE8uZCA=="
             }
           }
+        },
+        "0.1.1": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/temps-0.1.1/temps-0.1.1.tgz",
+              "size": 12720,
+              "sha256": "f7736de994652e4c8acdca7d2dd836dd2589431cd5e49f6f0d06bee3825b4d69",
+              "signature": "7sQfAkyQ8stThjgBU+NJEW4M8y9J5658deIMwUQMYTU6y9Ny5GEo8P1OkC8XL5164m3vULTYp/1c0EKTMYNKBw=="
+            }
+          }
         }
       }
     },
@@ -430,6 +562,22 @@
               "size": 1533865,
               "sha256": "e96a0b933eb43dd351043d5dd50f9fd232b9add779400fc0de5207df9e409a97",
               "signature": "6Eb/WH/Vrh4I9nkGfAv9+a9mVm7SSjAN3xwTtc3Fxh6X62mE4sNE3bGXNE1tfxO7sgDw7z1X3Qb3bhy+mLv+Aw=="
+            }
+          }
+        },
+        "0.1.1": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "providers",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/terminal-0.1.1/terminal-0.1.1.tgz",
+              "size": 1533891,
+              "sha256": "d9b60f25e2785061cec2c8ac7dfd84bb731b28627a55cb38c72d5018b2dc6701",
+              "signature": "cRRKDlCrEfd4um1pjawNHzidggcrKZj+2vfCwb5/UI5FyLMF6z0twCpoKZghhZGHCyvCSXgDqPC+8Xch+4WsAg=="
             }
           }
         }
@@ -454,6 +602,180 @@
               "size": 27300,
               "sha256": "b7b4952bf6efd5965aa63b8334b6067880e941840431d7a3d05ab559a1c4a019",
               "signature": "32kXdyQAnW+4pVLk+D1C3PbPSTHKyowfMAuQ4P74oGbSlFLUZSsp2VRoH6Os3PXepWsp/MiRjgyDVlkq4ylrCQ=="
+            }
+          }
+        },
+        "0.1.1": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [
+            "shell"
+          ],
+          "kind": "modules",
+          "unofficial": true,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/lunar-industries-containers-0.1.1/lunar-industries-containers-0.1.1.tgz",
+              "size": 27301,
+              "sha256": "2a1bd4e5a2e51d37bbeee5a17e7099a93f8f71e5a6fe296e75fb96505899e147",
+              "signature": "UDJLx2ypmtfQWGp1IHXfa30vLsIfXzlvI0zRb3VHYBGMyj2Vzqj6HshnL+NgQqGGSOslmMUSzWasR7A5GmziCw=="
+            }
+          }
+        }
+      }
+    },
+    "branches": {
+      "title": "Branches",
+      "description": "Branches des tâches : la page, leur création et la bascule, leurs pastilles et conseils sur le Kanban",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/branches-0.1.0/branches-0.1.0.tgz",
+              "size": 11310,
+              "sha256": "14cef97b0fd03d0e4409f6dd6560cff9ef0d44febffc37fd738c45ac02730a3a",
+              "signature": "jXy1veEs4ruNEBMfqwe4bNoTXMV2LK/4L1EIyJLtUiA/zc3OIaWX3OhBgNa2PX9/lLRV07C9K3qOuZFQGwAlAw=="
+            }
+          }
+        }
+      }
+    },
+    "kanban": {
+      "title": "Kanban",
+      "description": "Le Kanban : les tâches de la source par colonne, la scène en cours, les conseils et pastilles des autres extensions",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/kanban-0.1.0/kanban-0.1.0.tgz",
+              "size": 7619,
+              "sha256": "351841ab4758a8ce97516a8ea4ff370d77b016ba661cd952ea7ac03fbbe86ef6",
+              "signature": "X88PAgQccianxO6Pvm00VEQrJJUM7jsCxu//gEUwPloKL68HZI1e7N8ZYO3Rhrb+CRIfSXZyz6CPqU1B+x8EAg=="
+            }
+          }
+        }
+      }
+    },
+    "lunar-industries-claude": {
+      "title": "Lunar Industries - Claude",
+      "description": "Claude Code dans l’app, version Lunar Industries : sessions par l’Agent SDK (décisions, plan, questions, modèle, effort, coût), outils de l’espace de travail (tâche, worktrees, MR, pipelines, déploiement) et skills de l’équipe",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [
+            "shell"
+          ],
+          "kind": "modules",
+          "unofficial": true,
+          "released": "2026-10-01",
+          "packages": {
+            "linux-x64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/lunar-industries-claude-0.1.0/lunar-industries-claude-0.1.0-linux-x64.tgz",
+              "size": 115954293,
+              "sha256": "23bbd00bdf0c4cd151458d8e1aa73dc0e0ae81bd4dc7d5c4ca1821525b84ebe1",
+              "signature": "1k9iuJZnUKjYrmlSikpBz3SV1Bp1i9UbV53E/F8RZb9PUB73CZ53DIHavhssCZNEGorhR7OqTgHC6YW2DxZ+AA=="
+            }
+          }
+        }
+      }
+    },
+    "mascot-clo": {
+      "title": "Clo",
+      "description": "Clo : Étincelle bienveillante · thème atelier",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-clo-0.1.0/mascot-clo-0.1.0.tgz",
+              "size": 8816,
+              "sha256": "12c16cbd823dbb802911cfda7fa8366fbf984adcc522524f4e5eed02eaa4a4a8",
+              "signature": "H1GtREAGqYlVZbt3iUDeUo0SuqdzEasiVqHu/sji1SB/r8xNbGtr/Md7CXAYZp5nBCskZvsAyNr9258amKJ3BQ=="
+            }
+          }
+        }
+      }
+    },
+    "mascot-clo-ombre": {
+      "title": "Clo l’Ombre",
+      "description": "Clo l’Ombre : Étincelle maléfique · thème ombre",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-clo-ombre-0.1.0/mascot-clo-ombre-0.1.0.tgz",
+              "size": 8965,
+              "sha256": "917638e1955fc9a43011c6a3196015d373f3405da7bbe01c6fb2168265405280",
+              "signature": "jGmsiIK7bwedMCxu9qrIWdV6UHGx23oe2XhXwlATLitrFU2DizF+iLWZgQ1Lw8EiDQCAXIkeX3qR6aUJTCDVAw=="
+            }
+          }
+        }
+      }
+    },
+    "mascot-kero": {
+      "title": "Kéro",
+      "description": "Kéro : Grenouille de nuit · thème mare",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-kero-0.1.0/mascot-kero-0.1.0.tgz",
+              "size": 6544,
+              "sha256": "d34cd3b14fd93b9885a6ee3675c9fda7173f9545438ed9893c59ba0358cb480f",
+              "signature": "dEi1nmud3pxBWJILh1agpO2nvUx5kyIMbmmAUFS8Cxiy4Nvh+poNeC+Y4xE+xxMAgsdpBteQrbGgyOCG2sZfBw=="
+            }
+          }
+        }
+      }
+    },
+    "mascot-kuma": {
+      "title": "Kuma",
+      "description": "Kuma : Ours de Kumamoto · thème Kumamoto",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-kuma-0.1.0/mascot-kuma-0.1.0.tgz",
+              "size": 6786,
+              "sha256": "2187c4a02f47110833ee593a51e2b9cc4281452d6a653eef5a27e7150c21ac97",
+              "signature": "j3T3q0X75t7E75vWrCh6lEtvcK/d98hvLW+F9rFl0UYcGFzpMCeDYDojUGg5Jubchi+Dw38acc56b1elXZc+Ag=="
             }
           }
         }

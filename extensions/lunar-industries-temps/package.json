@@ -1,0 +1,14 @@
+{
+  "name": "@bidule/ext-lunar-industries-temps",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Le temps de la journée, version Lunar Industries : une journée qui vaut 1 répartie en lignes tâche-étiquette par vingtièmes, proposée depuis git et les tâches, semaine et calendrier, absences et déploiements, envoyée au Time Log",
+  "type": "module",
+  "exports": {
+    "./contract": "./contract.ts",
+    "./server/*": "./server/*.ts"
+  },
+  "bidule": {
+    "storeOnly": true
+  }
+}

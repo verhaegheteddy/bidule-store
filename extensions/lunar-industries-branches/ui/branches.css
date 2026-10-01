@@ -1,0 +1,243 @@
+/* Lunar Industries - Branches (taken from quack-board, Simon's pages/branches/branches.css): the list on the left,
+   the chosen branch on the right. */
+.lib-branches {
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .lib-branches {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ---------- the list: a panel like every page's blocks */
+.lib-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  outline: none;
+}
+.lib-list:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+.lib-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.lib-group-name {
+  padding: 0 var(--space-3) var(--space-1);
+  font-weight: 600;
+  color: var(--text-off);
+}
+.lib-option {
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  cursor: pointer;
+}
+.lib-option:hover {
+  background: var(--chip-hover);
+}
+.lib-option[aria-selected='true'] {
+  background: var(--chip);
+}
+.lib-name {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.lib-status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--text-2);
+}
+/* A branch without a task: the one state that asks for something. */
+.lib-to-do {
+  color: var(--accent-text);
+}
+/* The steps done so far, four short segments (a drawing: its sizes are its own). */
+.lib-progress {
+  flex: none;
+  width: 56px;
+  display: flex;
+  gap: var(--space-1);
+}
+.lib-progress > span {
+  flex: 1;
+  height: 3px;
+  border-radius: var(--radius-pill);
+  background: var(--card-hover);
+}
+.lib-progress > .done {
+  background: var(--text-2);
+}
+.lib-none {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--fs-sm);
+}
+.lib-merged {
+  align-self: flex-start;
+  margin-left: var(--space-3);
+}
+
+/* ---------- the detail: a panel too, stuck in view while the list scrolls */
+.lib-detail {
+  position: sticky;
+  top: var(--space-4);
+  gap: var(--space-4);
+}
+.lib-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.lib-title {
+  margin: 0;
+  font-size: var(--fs-xl);
+  font-weight: 500;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+/* The task field and, once linked, « Délier » on its line, level with the field. */
+.lib-task {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-2);
+}
+.lib-picker {
+  position: relative;
+  flex: 1;
+}
+.lib-picker-list {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + var(--space-1));
+  left: 0;
+  right: 0;
+  max-height: 320px;
+  overflow-y: auto;
+}
+.lib-picker-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  justify-content: space-between;
+  cursor: pointer;
+}
+.lib-picker-item[aria-selected='true'] {
+  background: var(--chip);
+}
+
+/* Four steps on a thin line across the whole width: a filled dot when done, a ring for the current one, a grey dot
+   to come. The last one sits at the right edge, its label under its dot. */
+.lib-steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.lib-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.lib-step:last-child {
+  flex: none;
+  align-items: flex-end;
+}
+.lib-step-track {
+  display: flex;
+  align-items: center;
+}
+.lib-step:not(:last-child) .lib-step-track::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: var(--card-line);
+}
+.lib-step.done:not(:last-child) .lib-step-track::after {
+  background: var(--text-2);
+}
+.lib-step:last-child .lib-step-track {
+  align-self: stretch;
+}
+.lib-step:last-child .lib-step-track::before {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: var(--card-line);
+}
+.lib-step:last-child:is(.current, .done) .lib-step-track::before {
+  background: var(--text-2);
+}
+.lib-step-mark {
+  flex: none;
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  border-radius: var(--radius-pill);
+  background: var(--card-line);
+}
+.lib-step.done .lib-step-mark {
+  background: var(--text-2);
+}
+.lib-step.current .lib-step-mark {
+  border: 2px solid var(--text);
+  background: transparent;
+}
+.lib-step-label {
+  font-size: var(--fs-md);
+  font-weight: 600;
+}
+.lib-step.todo .lib-step-label {
+  color: var(--text-off);
+}
+
+/* What to do now: a softer block, one main action. */
+.lib-next {
+  padding: var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--chip);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.lib-next-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.lib-next-text h3 {
+  margin: 0;
+  font-size: var(--fs-xl);
+  font-weight: 700;
+}
+.lib-next-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+.lib-target {
+  width: 200px;
+}
+
+/* The other actions, buttons in their usual outline. */
+.lib-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}

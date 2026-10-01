@@ -1,0 +1,78 @@
+{
+  "id": "lunar-industries-temps",
+  "version": "0.1.0",
+  "title": "Lunar Industries - Temps",
+  "engine": "^0.1.1",
+  "activation": [
+    "onEvent:tasks.changed",
+    "onEvent:git.changed"
+  ],
+  "contributes": {
+    "requires": [
+      "git"
+    ],
+    "uses": [
+      "tasks",
+      "timeLog"
+    ],
+    "pages": [
+      {
+        "id": "temps",
+        "path": "/lunar-industries/temps",
+        "title": "Temps",
+        "order": 20
+      }
+    ],
+    "events": [
+      "lunar-industries-temps.changed"
+    ],
+    "background": true,
+    "settings": {
+      "title": "Lunar Industries - Temps",
+      "panel": true,
+      "fields": [
+        {
+          "key": "lunar-industries-temps.workDays",
+          "type": "text",
+          "title": "Jours de travail",
+          "help": "Numéros ISO, 1 = lundi : un jour de travail passé sans rien est « à remplir », un autre jour « non travaillé ».",
+          "default": "1, 2, 3, 4, 5",
+          "hidden": true
+        },
+        {
+          "key": "lunar-industries-temps.integrationBranches",
+          "type": "text",
+          "title": "Branches d’intégration",
+          "help": "Un checkout dessus ne compte pas ; un merge vers l’une d’elles compte pour la branche fusionnée.",
+          "default": "main, master, develop, launchpad, factory, orbit"
+        },
+        {
+          "key": "lunar-industries-temps.deployBranches",
+          "type": "text",
+          "title": "Branches de production",
+          "help": "Un commit dessus va sur une ligne de déploiement, sans tâche.",
+          "default": "launchpad, orbit"
+        },
+        {
+          "key": "lunar-industries-temps.defaultLabel",
+          "type": "text",
+          "title": "Étiquette par défaut",
+          "help": "Celle d’une tâche jamais saisie, ou d’une ligne ajoutée à la main.",
+          "default": "Développement"
+        },
+        {
+          "key": "lunar-industries-temps.absentLabel",
+          "type": "text",
+          "title": "Étiquette d’absence",
+          "default": "Absent"
+        },
+        {
+          "key": "lunar-industries-temps.deployLabel",
+          "type": "text",
+          "title": "Étiquette de déploiement",
+          "default": "Déploiement"
+        }
+      ]
+    }
+  }
+}

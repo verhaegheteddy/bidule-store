@@ -1,0 +1,618 @@
+/* Lunar Industries - Temps (Simon's pages/temps), every class under `lit-`. Colours are the theme's. */
+
+:where([class*='theme-']) {
+  --lit-warn-bg: color-mix(in srgb, var(--butter) 24%, var(--card));
+  --lit-warn-ink: color-mix(in srgb, var(--butter) 45%, var(--text));
+}
+
+/* The week on the left, the chosen day on the right. The left column keeps its width, the day narrows. */
+.page.lit-temps {
+  display: grid;
+  grid-template-columns: 288px minmax(0, 1fr);
+  gap: var(--space-4);
+  align-items: start;
+}
+
+/* ---------- tags */
+.lit-tone-ok {
+  background: var(--ok-bg);
+  color: var(--ok-ink);
+}
+.lit-tone-warn {
+  background: var(--lit-warn-bg);
+  color: var(--lit-warn-ink);
+}
+.lit-tone-bad {
+  background: var(--bad-wash);
+  color: var(--bad-ink);
+}
+.lit-tone-neutral {
+  background: var(--chip);
+  color: var(--text-2);
+}
+
+/* ---------- the week */
+.lit-week-head {
+  gap: var(--space-2);
+}
+.lit-week-title {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+.lit-week-name {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  line-height: 1.1;
+}
+.lit-week-actions {
+  gap: var(--space-2);
+}
+.lit-week-actions .btn {
+  width: 100%;
+}
+/* The calendar hangs under its button. */
+.lit-cal-anchor {
+  position: relative;
+}
+.lit-week-days {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-radius: var(--radius-sm);
+}
+.lit-week-days:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+/* A day: its state's dot, its name and state, its total on the right. */
+.lit-week-day {
+  min-height: 56px;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  display: grid;
+  grid-template-columns: 10px minmax(0, 1fr) auto;
+  column-gap: var(--space-3);
+  align-items: center;
+  cursor: default;
+}
+.lit-week-day:hover {
+  background: var(--chip);
+}
+.lit-week-day[aria-selected='true'] {
+  background: var(--chip-hover);
+}
+.lit-week-dot {
+  grid-row: 1 / span 2;
+}
+/* Nothing to show yet (today without activity, a day to come): a hollow circle. */
+.lit-week-dot.hollow {
+  box-shadow: inset 0 0 0 2px var(--card-line);
+}
+.lit-week-day-name {
+  font-size: var(--fs-md);
+  font-weight: 800;
+}
+.lit-week-day.today .lit-week-day-name {
+  color: var(--accent-text);
+}
+.lit-week-day-state {
+  grid-column: 2;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--text-2);
+}
+/* A day that is not a work day: its name and state step back. */
+.lit-week-day.off .lit-week-day-name,
+.lit-week-day.off .lit-week-day-state {
+  color: var(--text-off);
+}
+.lit-week-day.off .lit-week-day-name {
+  font-weight: 600;
+}
+.lit-week-day-total {
+  grid-row: 1 / span 2;
+  grid-column: 3;
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--text-off);
+}
+.lit-week-day-total.recorded {
+  color: var(--text);
+}
+.lit-week-work {
+  gap: var(--space-2);
+  padding-left: var(--space-3);
+}
+.lit-nowrap {
+  white-space: nowrap;
+}
+/* The days still to deal with this week, and a way to the oldest. */
+.lit-week-pending {
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--lit-warn-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+.lit-week-pending-text {
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--lit-warn-ink);
+}
+
+/* ---------- the calendar */
+.lit-cal {
+  position: absolute;
+  z-index: 60;
+  top: calc(100% + var(--space-2));
+  left: 0;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.lit-cal-title {
+  text-align: center;
+  font-size: var(--fs-xl);
+  font-weight: 700;
+}
+.lit-cal-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+.lit-cal-letter {
+  text-align: center;
+}
+.lit-cal-day {
+  width: 100%;
+  height: 36px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+.lit-cal-day:hover {
+  background: var(--chip);
+}
+.lit-cal-day.today {
+  color: var(--accent-text);
+}
+.lit-cal-day.future {
+  color: var(--text-off);
+}
+.lit-cal-day[aria-pressed='true'] {
+  background: var(--chip-hover);
+}
+.lit-cal-day:focus-visible {
+  outline: 2px solid var(--ring);
+}
+.lit-cal-dot {
+  width: 4px;
+  height: 4px;
+}
+
+/* ---------- the day */
+/* No padding at the bottom: the send bar closes the panel. */
+.panel.lit-day {
+  padding-bottom: 0;
+}
+.lit-day-head {
+  gap: var(--space-3);
+  min-height: 40px;
+}
+.lit-day-title {
+  margin: 0;
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  line-height: 1.1;
+}
+.lit-more {
+  position: relative;
+}
+.lit-more-menu {
+  position: absolute;
+  z-index: 60;
+  top: calc(100% + var(--space-1));
+  right: 0;
+  min-width: 260px;
+}
+.lit-more-menu .menu-item {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+}
+/* Why the day cannot be sent (no Time Log that writes whole days): said above the lines. */
+.lit-problem {
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--lit-warn-bg);
+  color: var(--lit-warn-ink);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+}
+.lit-bar-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+/* The day as a bar: one segment per line with a share; the lane shows through what is not given out. */
+.lit-bar {
+  position: relative;
+  height: 60px;
+  border-radius: var(--radius-md);
+  background: var(--chip);
+  touch-action: none;
+}
+/* The part of the day not given out yet: hatched, with what is left where it fits. */
+.lit-rest {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: var(--radius-md);
+  background: repeating-linear-gradient(135deg, transparent 0 6px, var(--bad-wash) 6px 12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--bad-ink);
+}
+.lit-scale {
+  display: flex;
+  justify-content: space-between;
+}
+/* The label's colour comes in --c, its text colour in --on-c. data-size (lg/md/sm) says what fits: title and share,
+   the share, or the colour only. The border in the panel's colour leaves a gap between two segments. */
+.lit-seg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 0 var(--space-2);
+  border: 2px solid var(--card);
+  border-radius: var(--radius-md);
+  background: var(--c);
+  color: var(--on-c);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1px;
+  text-align: left;
+  font: inherit;
+}
+.lit-seg:hover {
+  filter: brightness(1.1);
+}
+.lit-seg[aria-pressed='true'] {
+  box-shadow: 0 0 0 2px var(--text);
+}
+.lit-seg[data-size='md'] {
+  align-items: center;
+}
+/* A branch without a task, to settle: hollow with a dashed outline, a shape that says « missing » without relying on
+   its colour. */
+.lit-seg.orphan {
+  background: var(--card);
+  color: var(--bad-ink);
+  outline: 2px dashed var(--bad-ink);
+  outline-offset: -2px;
+}
+.lit-seg-title {
+  max-width: 100%;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+.lit-seg-share {
+  font-size: var(--fs-md);
+  font-weight: 700;
+}
+.lit-grip {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 12px;
+  /* Centred on the boundary between two segments (`left` is set on it). */
+  translate: -50% 0;
+  cursor: ew-resize;
+  display: flex;
+  justify-content: center;
+}
+.lit-grip::after {
+  content: '';
+  width: 4px;
+  margin: var(--space-2) 0;
+  border-radius: var(--radius-pill);
+  background: var(--handle);
+  opacity: 0;
+  transition: opacity 0.12s ease;
+}
+.lit-bar:hover .lit-grip::after,
+.lit-grip:focus-visible::after {
+  opacity: 1;
+}
+.lit-grip:focus-visible {
+  outline: 2px solid var(--ring);
+  border-radius: var(--radius-sm);
+}
+
+/* The bar's key: one row per line. */
+.lit-lines {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.lit-line + .lit-line {
+  border-top: 2px solid var(--card-line);
+}
+.lit-line-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 48px;
+}
+/* The whole name is the button that unfolds the line; its chevron turns when it is open. */
+.lit-line-name {
+  flex: 1;
+  min-width: 0;
+  height: 40px;
+  padding: 0 var(--space-2);
+  border: none;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-align: left;
+  font: inherit;
+}
+.lit-line-name:hover,
+.lit-line.open .lit-line-name {
+  background: var(--chip);
+}
+.lit-chevron {
+  flex: none;
+  color: var(--text-2);
+  font-size: var(--fs-lg);
+  transition: transform 0.15s ease;
+}
+.lit-line.open .lit-chevron {
+  transform: rotate(90deg);
+}
+.lit-line-title {
+  font-size: var(--fs-md);
+  font-weight: 700;
+}
+.lit-line-where {
+  font-size: var(--fs-xs);
+  color: var(--mono);
+}
+/* A line at 0 counts for nothing until given a share. */
+.lit-line.zero .lit-line-title,
+.lit-line.zero .lit-line-share {
+  color: var(--text-off);
+}
+.lit-line-label {
+  width: 170px;
+  height: 40px;
+  padding: 0 var(--space-3);
+  border: 2px solid var(--card-line);
+  border-radius: var(--radius-md);
+  background: var(--card);
+  color: var(--text);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+}
+.lit-line-step {
+  gap: var(--space-1);
+}
+.lit-line-share {
+  min-width: 44px;
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  text-align: center;
+}
+/* What the line is based on, and what else can be done with it: aligned on the line's title. */
+.lit-line-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 0 var(--space-2) var(--space-3) var(--space-6);
+}
+.lit-line-actions {
+  gap: var(--space-2);
+}
+.lit-chip-dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+}
+/* A branch without a task: a dashed circle, like its segment in the bar. */
+.lit-chip-dot.orphan {
+  background: transparent;
+  outline: 2px dashed var(--bad-ink);
+  outline-offset: -2px;
+  width: 10px;
+  height: 10px;
+}
+/* Under a branch without a task, aligned on the line's title: attach it or keep it. */
+.lit-line-fix {
+  margin: 0 0 var(--space-3) var(--space-6);
+  padding: var(--space-3) var(--space-4);
+  border: 2px dashed var(--bad-ink);
+  border-radius: var(--radius-md);
+  background: var(--bad-wash);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.lit-line-fix p {
+  margin: 0;
+  font-size: var(--fs-md);
+  font-weight: 700;
+}
+/* A task the source still lists as to do, with commits: a suggestion, written only if clicked. */
+.lit-started {
+  align-self: flex-start;
+}
+.lit-chips {
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.lit-check {
+  flex-direction: row;
+  align-items: center;
+}
+.lit-evidence {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: var(--fs-sm);
+}
+/* A task search, with the choice of no task next to it. */
+.lit-attach {
+  align-items: flex-end;
+  gap: var(--space-2);
+}
+.lit-attach .lit-picker {
+  flex: 1;
+  min-width: 0;
+}
+.lit-add {
+  padding-top: var(--space-3);
+  border-top: 2px solid var(--card-line);
+}
+.lit-picker {
+  position: relative;
+}
+.lit-picker .field {
+  width: 100%;
+}
+.lit-picker-list {
+  position: absolute;
+  z-index: 60;
+  top: calc(100% + var(--space-1));
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: var(--space-1);
+  list-style: none;
+}
+.lit-picker-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.lit-picker-item[aria-selected='true'] {
+  background: var(--chip);
+}
+/* A day without lines: a dashed frame in the middle, what the day means and what can be done. */
+.lit-empty {
+  align-self: center;
+  width: min(600px, 100%);
+  margin: var(--space-6) auto;
+  padding: var(--space-5);
+  border: 2px dashed var(--card-line);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+.lit-empty h3 {
+  margin: 0;
+  font-size: var(--fs-xl);
+  font-weight: 700;
+}
+.lit-empty p {
+  margin: 0;
+}
+.lit-empty-add {
+  align-self: stretch;
+  text-align: left;
+}
+/* The send bar: at the bottom of the panel, and in view at the bottom of the window while the day scrolls. */
+.lit-foot {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  margin: 0 calc(-1 * var(--space-5));
+  padding: var(--space-3) var(--space-5);
+  border-top: 2px solid var(--card-line);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  background: var(--card);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+.lit-checks {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+/* A condition of sending: a tick when met, a « ! » when not. */
+.lit-check-line {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--bad-ink);
+}
+.lit-check-line.ok {
+  color: var(--ok-ink);
+}
+.lit-workdays {
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* Too narrow for the day's controls beside the week: an editable line puts its label and share under its name, and
+   the week goes above the day. */
+@media (max-width: 1200px) {
+  .lit-line-row:has(.lit-line-label) {
+    flex-wrap: wrap;
+    padding: var(--space-1) 0;
+  }
+  .lit-line-row:has(.lit-line-label) .lit-line-name {
+    flex-basis: 100%;
+  }
+  .lit-foot {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 900px) {
+  .page.lit-temps {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

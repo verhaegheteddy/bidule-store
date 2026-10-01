@@ -1,0 +1,242 @@
+/* Lunar Industries - Kanban (Simon's): the tray of branches without a task, then the columns grouped by stage. */
+.lik-page {
+  gap: var(--space-4);
+}
+
+/* Recent branches without a task, dragged from here onto a card to link them. */
+.lik-tray {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+}
+.lik-tray-toggle {
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0 var(--space-1) 0 var(--space-3);
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+.lik-tray-toggle:hover {
+  background: var(--chip-hover);
+}
+.lik-orphans {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.lik-orphan {
+  height: 32px;
+  padding: 0 var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  border: 2px dashed var(--card-line);
+  border-radius: var(--radius-pill);
+  background: var(--card);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--fs-sm);
+  cursor: grab;
+}
+.lik-orphan:hover {
+  background: var(--chip-hover);
+}
+
+/* One column per status of the source, consecutive ones of a group under its heading; the board scrolls sideways. */
+.lik-board {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  overflow-x: auto;
+  padding-bottom: var(--space-2);
+}
+.lik-group {
+  flex: 1 0 auto;
+  min-width: min-content;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.lik-group-head {
+  padding: 0 var(--space-2);
+  color: var(--text-2);
+  font-size: var(--fs-xs);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.lik-group-columns {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+.lik-column {
+  flex: 1 1 0;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border: 2px solid transparent;
+  border-radius: var(--radius-lg);
+}
+.lik-column.folded {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+.lik-column.drop-over {
+  border-color: var(--ring);
+  border-style: dashed;
+}
+.lik-column-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 32px;
+  padding: 0 var(--space-2);
+}
+.lik-column-head h2 {
+  margin: 0;
+  font-size: var(--fs-md);
+  font-weight: 700;
+}
+.lik-column-toggle {
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+.lik-column-toggle:hover {
+  background: var(--chip-hover);
+}
+/* An empty column still shows where a card can be dropped. */
+.lik-drop-hint {
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--card-line);
+  border-radius: var(--radius-lg);
+  color: var(--text-2);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+/* A card: its branch and badge, its title, its review or CI marks, then the other extensions' badges and advice. */
+.lik-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: 2px solid var(--card-line);
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+}
+.lik-card:hover {
+  border-color: var(--card-hover);
+}
+.lik-card.urgent {
+  border-color: var(--accent-line);
+}
+.lik-card.done {
+  opacity: 0.75;
+}
+/* The card a branch from the tray is about to be dropped on. */
+.lik-card.branch-over {
+  border-color: var(--ring);
+  border-style: dashed;
+}
+.lik-card-head {
+  gap: var(--space-2);
+  min-height: 22px;
+}
+.lik-branch {
+  min-width: 0;
+  color: var(--mono);
+  font-size: var(--fs-xs);
+}
+.lik-done-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--ok-ink);
+}
+.lik-marks,
+.lik-badges {
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+.lik-mark {
+  border: 0;
+  cursor: pointer;
+}
+
+/* The tones of a badge or a mark (a review's CI). */
+.lik-tone-ok {
+  background: var(--ok-bg);
+  color: var(--ok-ink);
+}
+.lik-tone-bad {
+  background: var(--bad-wash);
+  color: var(--bad-ink);
+}
+.lik-tone-warn {
+  background: var(--git-bg);
+  color: var(--git-ink);
+}
+.lik-tone-info {
+  background: var(--chip);
+  color: var(--blue);
+}
+.lik-tone-neutral {
+  background: var(--chip);
+  color: var(--text-2);
+}
+.lik-tone-accent {
+  background: var(--coral);
+  color: var(--on-coral);
+}
+
+/* « Lier des branches… »: ticked rows grouped by repo. */
+.lik-checks {
+  max-height: 50vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.lik-check-group {
+  margin: var(--space-3) 0 var(--space-1);
+}
+.lik-check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 36px;
+}
+.lik-check-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lik-check-note {
+  max-width: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lik-menu {
+  max-height: 80vh;
+  overflow-y: auto;
+}

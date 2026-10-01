@@ -1,0 +1,33 @@
+{
+  "id": "lunar-industries-kanban",
+  "version": "0.1.0",
+  "title": "Lunar Industries - Kanban",
+  "engine": "^0.1.1",
+  "contributes": {
+    "uses": [
+      "tasks",
+      "git"
+    ],
+    "pages": [
+      {
+        "id": "kanban",
+        "path": "/lunar-industries/kanban",
+        "title": "Kanban",
+        "order": 0
+      }
+    ],
+    "settings": {
+      "title": "Lunar Industries - Kanban",
+      "panel": true,
+      "fields": [
+        {
+          "key": "lunar-industries-kanban.hidden",
+          "type": "text",
+          "title": "Colonnes masquées",
+          "default": "[]",
+          "hidden": true
+        }
+      ]
+    }
+  }
+}

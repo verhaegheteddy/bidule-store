@@ -1,0 +1,80 @@
+{
+  "id": "lunar-industries-branches",
+  "version": "0.1.0",
+  "title": "Lunar Industries - Branches",
+  "engine": "^0.1.1",
+  "contributes": {
+    "requires": [
+      "git"
+    ],
+    "uses": [
+      "tasks"
+    ],
+    "pages": [
+      {
+        "id": "branches",
+        "path": "/lunar-industries/branches",
+        "title": "Branches",
+        "order": 10
+      }
+    ],
+    "events": [
+      "lunar-industries-branches.changed"
+    ],
+    "background": true,
+    "settings": {
+      "title": "Lunar Industries - Branches",
+      "fields": [
+        {
+          "key": "lunar-industries-branches.hidden",
+          "type": "text",
+          "title": "Branches d'intégration",
+          "help": "Masquées de la liste, proposées comme cibles des MR (avec la branche par défaut du dépôt).",
+          "default": "main, master, develop, launchpad, factory, orbit"
+        },
+        {
+          "key": "lunar-industries-branches.reviewTarget",
+          "type": "text",
+          "title": "Branche cible des MR",
+          "help": "Celle d'un dépôt qui n'en a pas choisi une à lui, s'il a cette branche.",
+          "default": ""
+        },
+        {
+          "key": "lunar-industries-branches.naming",
+          "type": "choice",
+          "title": "Nommage des branches",
+          "help": "Pour retrouver l'issue d'une branche (« Closes #… » dans la MR).",
+          "options": [
+            {
+              "value": "issue",
+              "label": "{issue}-{slug} : une issue d’abord"
+            },
+            {
+              "value": "ref",
+              "label": "{ref}-{slug} : la référence de la tâche"
+            },
+            {
+              "value": "template",
+              "label": "Le modèle ci-dessous"
+            }
+          ],
+          "default": "issue"
+        },
+        {
+          "key": "lunar-industries-branches.template",
+          "type": "text",
+          "title": "Modèle de nom de branche",
+          "help": "{issue}, {ref} et {slug}.",
+          "default": "{ref}-{slug}"
+        },
+        {
+          "key": "lunar-industries-branches.targets",
+          "type": "text",
+          "title": "Branche cible par dépôt",
+          "default": "{}",
+          "hidden": true
+        }
+      ]
+    }
+  }
+}

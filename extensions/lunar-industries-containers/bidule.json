@@ -1,0 +1,25 @@
+{
+  "id": "lunar-industries-containers",
+  "version": "0.1.0",
+  "title": "Lunar Industries - Conteneurs",
+  "engine": "^0.1.1",
+  "permissions": [
+    "shell"
+  ],
+  "contributes": {
+    "requires": [
+      "terminal"
+    ],
+    "pages": [
+      {
+        "id": "containers",
+        "path": "/lunar-industries/conteneurs",
+        "title": "Conteneurs",
+        "order": 60
+      }
+    ],
+    "events": [
+      "lunar-industries-containers.changed"
+    ]
+  }
+}

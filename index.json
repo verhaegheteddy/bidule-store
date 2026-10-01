@@ -502,6 +502,22 @@
               "signature": "O8YBsn7Q93R1t73Slnol18sygDCYr5k8bZjAvQz1F/E6xpopI75Qs/7a013CNgnZ6N/HZ07/faX2pAQ4vdrfCg=="
             }
           }
+        },
+        "0.1.5": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "linux-x64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/matrix-0.1.5/matrix-0.1.5-linux-x64.tgz",
+              "size": 10474927,
+              "sha256": "e5fb536f576a64d9562227fc4750e63770ae6eac581fe9672941704e90f28e5a",
+              "signature": "kmtIUAXUadP7c2FbR4/EYOhoPf7CgfqX0GKQndOYAHMOhHIjKF17WHzrnp/sW+nlWLZyUF802/EVHls+PUn2AQ=="
+            }
+          }
         }
       }
     },

@@ -1,0 +1,3 @@
+# Generated when working on the extensions inside Bidule's checkout (npm run store:link).
+extensions/*/ui/registry/
+extensions/*/node_modules/

@@ -40,6 +40,24 @@
               "signature": "WsVgrzaWmJsrrQCfuH//E3mOM0FeS4b7Gxg04uCRhiWgCKvMNMVjvpbESc8Q/C50Z+3aIp7sZY03W3jV/b32Cg=="
             }
           }
+        },
+        "0.1.5": {
+          "engine": "^0.1.3",
+          "dependencies": {},
+          "permissions": [
+            "shell"
+          ],
+          "kind": "modules",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/claude-0.1.5/claude-0.1.5.tgz",
+              "size": 45994,
+              "sha256": "8928dcd6e9598b7a737848bb6f41976951d6ff1dc17a16228c157a697e551a1e",
+              "signature": "/97M5z9exxHA9W4fGSTqdpTuGINE9CRSDotJiJwaxx9gpkRMfySb04ohHuTjjTI02GA/eqdbxXbK3dV0GiUjCw=="
+            }
+          }
         }
       }
     },
@@ -156,6 +174,22 @@
               "signature": "7fK8sM0Vkv4c6Bg1lNKSJZkfL516WSGXEev/OhlnHcG/KoVED6LDg1XcmzsyU2lxlhXhX10KDY3UH7no4SzSCw=="
             }
           }
+        },
+        "0.1.2": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/github-0.1.2/github-0.1.2.tgz",
+              "size": 3579,
+              "sha256": "156a8a1b5edcfa219cebeaf9103c39c44ee73dcb361b2023d8c9826d36e9ce65",
+              "signature": "Df5w9xvmGiN7ly0ahluZDSolS5NGgqqL1uc9DmHMlaxSxSKtDAa1X84UlLGhAjSf0516i0ARlbdkuB2IS6XFCQ=="
+            }
+          }
         }
       }
     },
@@ -192,6 +226,22 @@
               "size": 3298,
               "sha256": "10173172e9bdaea57f4aa7cf306ea9315aac826e4e942f8ef75bf252f8cddad8",
               "signature": "5pwltYNwaNq/cYpmnE2i68fBLEhumB3I9g4tSP+4CJgex5wUyJyCT8H/z0wUhnor4khF/TWxIETcHclkl+5CBQ=="
+            }
+          }
+        },
+        "0.1.2": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/gitlab-0.1.2/gitlab-0.1.2.tgz",
+              "size": 3368,
+              "sha256": "51c17486d8378821358a980d445440370cf073641f6b17aecea7a178fc3e5cf7",
+              "signature": "sXbezvkGv1yzztzZkhF8Saw8zm4RSaQ7bQms62kA/+bRAczaO1vFja2ru/jPLLfPWRp5iWQdjuur2OaVnVMGBg=="
             }
           }
         }
@@ -624,6 +674,22 @@
               "signature": "7QQDeaVDEdX222P8Cyo6DiBZJ1+UQrYF88vyTjYIqB0vwBG2JcVkY76bZV4ecu1Sj6biob6QXzGjUBUFyX7fCw=="
             }
           }
+        },
+        "0.1.3": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/temps-0.1.3/temps-0.1.3.tgz",
+              "size": 14311,
+              "sha256": "7e86fad244211c83a065a1281cea0f003d5ed278fb45a5341fc04ed3e4195a66",
+              "signature": "SCVSQZ2U4hnnU7rImTISnIE/UAdaHtGFN3Nya2ps4UPk82bgetro89x2bjo6A3jeH/+tdkBFc8yv0tspQPLXCg=="
+            }
+          }
         }
       }
     },
@@ -674,6 +740,24 @@
               "size": 1534234,
               "sha256": "31cb8c3d5c06ad1e3a3f89a7b9c3801aba69453d92448c98e26621ae7698c4b8",
               "signature": "+GuVYt1MkRnMm7MsQLVgPLVZa/xGTPdzIjAU45rXJVQFyMlVwAUKhgj15xVVwEcNkVMB9zkVHp4pWylCLNgPCw=="
+            }
+          }
+        },
+        "0.1.6": {
+          "engine": "^0.1.3",
+          "dependencies": {},
+          "permissions": [
+            "shell"
+          ],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/terminal-0.1.6/terminal-0.1.6.tgz",
+              "size": 1773096,
+              "sha256": "218414dd499f75c77f6983d7fcdee9d278213273306396e420a0b0b847afe1d8",
+              "signature": "+GPD5QnVhpHEqyLb+t4XjNa6vYzKs2QMt8OEDsltq/YtsI/lf0N/soKkHBv3UDE07UD5DedzTQgrOX/ejZlTAw=="
             }
           }
         }

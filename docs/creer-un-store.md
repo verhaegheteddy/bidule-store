@@ -1,7 +1,7 @@
 # Créer un store d'extensions pour Bidule
 
 Bidule installe ses extensions depuis des **stores** : le sien (ce dépôt), et ceux qu'une personne ajoute dans
-Réglages › Extensions › Stores. Un store, c'est un fichier `index.json` servi en https, des paquets `.tgz` qu'il
+Réglages › Stores. Un store, c'est un fichier `index.json` servi en https, des paquets `.tgz` qu'il
 référence, et une paire de clés ed25519 : la clé privée signe les paquets, la clé publique est donnée à ceux qui
 ajoutent le store. Bidule refuse tout paquet dont l'empreinte ne correspond pas à l'index ou dont la signature ne vient
 pas de la clé du store qui le propose.
@@ -181,7 +181,7 @@ Pour essayer en local avant de publier, Bidule accepte un index en `http` sur ce
 
 ## 5. L'ajouter dans Bidule
 
-Réglages › Extensions › Stores › **Ajouter un store** : un nom, l'adresse de l'index, la clé publique (le contenu de
+Réglages › Stores › **Ajouter un store** : un nom, l'adresse de l'index, la clé publique (le contenu de
 `store-public.pem`). Bidule lit l'index aussitôt et refuse un store qui ne répond pas. Ses extensions apparaissent dans
 la liste, marquées « Communautaire · <nom du store> ». Retirer un store laisse en place ce qui en a été installé, sans
 plus de mises à jour.

@@ -1126,6 +1126,22 @@
               "signature": "w52sY0ICaxKu7rAclLkteLetkQb1eCuq9d1UavqwnAO14TOvt0L3FNhbR9qUryWvxkyLOlOZwLkHBjsU6BsFCA=="
             }
           }
+        },
+        "0.1.1": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": true,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/lunar-industries-branches-0.1.1/lunar-industries-branches-0.1.1.tgz",
+              "size": 15085,
+              "sha256": "c3711e16ab4a195afbdf30088ec324a2ecebc1526f63974ca6fef6e64ecc32aa",
+              "signature": "nfxWIUlq88bklVYXxoQb7Sbqr50V/VVeD6R09BIq/PYzAfF0Xrv18GoRJHjWmQN8GECCEV59JVOuelojR66AAw=="
+            }
+          }
         }
       }
     },

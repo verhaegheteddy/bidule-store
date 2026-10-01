@@ -1,0 +1,459 @@
+{
+  "schema": 1,
+  "extensions": {
+    "claude": {
+      "title": "Claude Code",
+      "description": "Claude Code sur une tâche : ses branches en worktrees, le mode plan dans le terminal, le plan publié",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {
+            "terminal": "^0.1.0"
+          },
+          "permissions": [
+            "shell"
+          ],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/claude-0.1.0/claude-0.1.0.tgz",
+              "size": 21052,
+              "sha256": "dc4f61d6e7c7810d715a6ec9da90508e494878a8e3abaa4c6e35254f5256366c",
+              "signature": "C2euSWhrdD5fVfzLeBTKkTyFkcln9nyB+Yi1/JC2NDyxFBh2twUUdyVP1clb/3JJ/e2cNoU39AdldLBPXqq6Cg=="
+            }
+          }
+        }
+      }
+    },
+    "containers": {
+      "title": "Conteneurs",
+      "description": "Conteneurs Docker et Podman : les voir, les démarrer, les arrêter, un shell ou leurs logs dans le terminal",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {
+            "terminal": "^0.1.0"
+          },
+          "permissions": [
+            "shell"
+          ],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/containers-0.1.0/containers-0.1.0.tgz",
+              "size": 17526,
+              "sha256": "d33cfa041c730a8d3832c3a4961f02709248a78ca2023b14eeefeb153e3ca999",
+              "signature": "CkO/X/AXHabqdtbHaAyOKaSLE/WV7o8vXdOAlAwlxg+Bu6Q0PCck9dR0FEJX2ReAZBhz5eAKKWDaVjrQ3w9yAg=="
+            }
+          }
+        }
+      }
+    },
+    "exemple": {
+      "title": "Exemple",
+      "description": "Extension modèle : une page, une commande, un événement, un réglage, un secret, une table",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/exemple-0.1.0/exemple-0.1.0.tgz",
+              "size": 12544,
+              "sha256": "37209d1bc5f290cd42c14a5fee224e941814c8c82041a742135fea30767659fa",
+              "signature": "UOvpiAJ4qdGbwkDDGu4WiwaaISFFs+m8kmr2bTAiqn/CpUHx5J3KzWHOnJTymIGgiDy4+TbkZKebNv/3QsrjBw=="
+            }
+          }
+        }
+      }
+    },
+    "git": {
+      "title": "git",
+      "description": "Dépôts git locaux : branches des tâches, activité, création et bascule de branche",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/git-0.1.0/git-0.1.0.tgz",
+              "size": 22406,
+              "sha256": "bfb216f236a7880061d5a9c6f7a3ec905942cdd900f77ec9d83de8afeb53faf3",
+              "signature": "xM6GdEVO2SnmkUgByYKsoDJPjxUDUrvjK5gYEIkMFFmfUVxF2xbEERrddIPMJBvFhyMIRnu2rJ0E7QGGwWH8Ag=="
+            }
+          }
+        }
+      }
+    },
+    "github": {
+      "title": "GitHub",
+      "description": "GitHub : pull requests et CI des branches hébergées sur GitHub",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {
+            "git": "^0.1.0"
+          },
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/github-0.1.0/github-0.1.0.tgz",
+              "size": 1592,
+              "sha256": "4f74012f5c80e46f164fced1b30c97c88bcb5facc767d963ad5cc325973af226",
+              "signature": "ojybsbyfiUwrtsh4jE7EtwEDVflvinskHGhrBIRK6Wq2PIJ3MhUabNi7lZZ3S2Q1qAh/mtjutl1oDWm//I/uBQ=="
+            }
+          }
+        }
+      }
+    },
+    "gitlab": {
+      "title": "GitLab",
+      "description": "GitLab : merge requests et pipelines des branches hébergées sur GitLab",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {
+            "git": "^0.1.0"
+          },
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/gitlab-0.1.0/gitlab-0.1.0.tgz",
+              "size": 1823,
+              "sha256": "b07b0d6272458d1d9f4b6243aa62c4433b545c1832eeede5dd097ae586fd5cb1",
+              "signature": "xnDbzbNf4ZCU4vy6Ykx3XWzReG8Y+41iIXRpRO26Ri27LpiWkfKLtSM4BLvT8JIBHnsc6juZ1VlTBaUtGX/ABQ=="
+            }
+          }
+        }
+      }
+    },
+    "mascot-boo": {
+      "title": "Boo",
+      "description": "Boo : Fantôme d’Halloween · thème Halloween",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-boo-0.1.0/mascot-boo-0.1.0.tgz",
+              "size": 7615,
+              "sha256": "889c737f4cc867691133da1b94c077895174b9f1a44939e2f2b1f99065600cbe",
+              "signature": "T7czm39P0bT1jDDp6LT9jHiONHc+DJqLg6Tr2agj/qp94JpBDe7F6GexRpjN1s9vFq6zHaLy8F07k2JGifACAQ=="
+            }
+          }
+        }
+      }
+    },
+    "mascot-cannelle": {
+      "title": "Cannelle",
+      "description": "Cannelle : Renne de Noël · thème Noël",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-cannelle-0.1.0/mascot-cannelle-0.1.0.tgz",
+              "size": 7501,
+              "sha256": "2b9d2c1349d79c70d0b7a3e192db444b2ff518c3223f7ecf08caab4e5636da1c",
+              "signature": "zTY0rVPmITJu2j9HcqRosrWYmrnXK9DFGAbUsj5SQGhBN7fs1yC+aaGmifb4FEH9s6k0NwlavwYOcqpMfR1vAA=="
+            }
+          }
+        }
+      }
+    },
+    "mascot-capy": {
+      "title": "Capy",
+      "description": "Capy : Capybara zen · thème onsen",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-capy-0.1.0/mascot-capy-0.1.0.tgz",
+              "size": 6751,
+              "sha256": "a96bb7afe34648d251242c989f7258ed79e25e84f8f40258719d391fe112de28",
+              "signature": "rQwAiheIIUn0YUU0hcpXzleNZVTnHbYJtDcokjA47E8lw4OH2pfIcsUrpL2KHpwqYkQO2YH1YpYjuN4A74aBBw=="
+            }
+          }
+        }
+      }
+    },
+    "mascot-coincoin": {
+      "title": "Coincoin",
+      "description": "Coincoin : Canard de débug · thème pixel art",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-coincoin-0.1.0/mascot-coincoin-0.1.0.tgz",
+              "size": 9280,
+              "sha256": "4a60682f2070f7fcf938e4806e129f57f732e4a551a810ae9f6a6ef14699abff",
+              "signature": "T3FYWtY9GAYmezGBu6gIHSul3mAWc7jA7mmBGXpFIr9de4KFB2WYej/jQek+GcCpq51MTkml/nnoYB8xZtMNDw=="
+            }
+          }
+        }
+      }
+    },
+    "mascot-dragon": {
+      "title": "Drakko",
+      "description": "Drakko : Dragon grognon · thème nuit",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-dragon-0.1.0/mascot-dragon-0.1.0.tgz",
+              "size": 6227,
+              "sha256": "218fa60af6de607c92c8f53106692769f2049af83b3a040101228f226bd3041b",
+              "signature": "4XAuMQYaij3pDPs3nXNXmvkODY3NpUqeexb/UB/rxgeUWqrxfvIcIkp9hRZ7A25E4t4tGSdzUZQr9Wpl9XJgAw=="
+            }
+          }
+        }
+      }
+    },
+    "mascot-kenji": {
+      "title": "Kenji",
+      "description": "Kenji : Shiba samouraï · thème jardin japonais",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-kenji-0.1.0/mascot-kenji-0.1.0.tgz",
+              "size": 6847,
+              "sha256": "a9555112841b482b6bc3fb82b1e795067dd1134d8cf849e1176cc8b88971ab5c",
+              "signature": "cDfDN90urW/69fh3GmqbJ9vEnIqVRGQrotb/XtKUFPwJVXx89fctSwbGW+/kfRwpIEmyeEOEtSB8xuYIxoneDQ=="
+            }
+          }
+        }
+      }
+    },
+    "mascot-mako": {
+      "title": "Mako",
+      "description": "Mako : Requin pirate · thème tempête",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-mako-0.1.0/mascot-mako-0.1.0.tgz",
+              "size": 4646,
+              "sha256": "ab3988d6f13a6a1ebc6ad887e40fc074c7c496222766b262e8ea6cef19fb343f",
+              "signature": "mHa5WM6wWW6vWHh+TvlJe4UB5NtRh0SKNBef6VJPOFZCD3nUp9wqRoasQraeS4cToCDM8M6JdvkD0txO/H8MDA=="
+            }
+          }
+        }
+      }
+    },
+    "mascot-nox": {
+      "title": "Nox",
+      "description": "Nox : Raton laveur hacker · thème datacenter",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-nox-0.1.0/mascot-nox-0.1.0.tgz",
+              "size": 9775,
+              "sha256": "0ed1f46cd4bd1e8d0dbcd2c23a7187be59b23791bfec2d2b7c6ad171a62f4470",
+              "signature": "trmon19mFqQrkCDTa7aJ0sUGo/iiuET/U9O9ws5T6k9MLSMypF/RPWbvr6WKUqI0KcwY11QnX5KRjPdzHhrzDQ=="
+            }
+          }
+        }
+      }
+    },
+    "mascot-octo": {
+      "title": "Octo",
+      "description": "Octo : Pieuvre codeuse · thème abysses",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-octo-0.1.0/mascot-octo-0.1.0.tgz",
+              "size": 6074,
+              "sha256": "c72b979b15d4ec277029d66e400840e7b307bb3453270b9e8892e6f4131ea9bb",
+              "signature": "S5MmnWY05HxpwlKfdkQEjrTs8/lmMhz0hAU6iyt9rhtDQ0lTXuwqPNO/VtScVN3O2Gd2Vpx/lNvC/BNKfKeHBw=="
+            }
+          }
+        }
+      }
+    },
+    "mascot-pip": {
+      "title": "Pip",
+      "description": "Pip : Pingouin du gel du code · thème banquise",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-pip-0.1.0/mascot-pip-0.1.0.tgz",
+              "size": 6117,
+              "sha256": "21d9d8903df6082f66ff6eb9c52b7df5c610f3a3dafcac08522318a610246856",
+              "signature": "nEoH7kLzHpz6nUf+on7hrbaO0slr/IrjuCg57fOXWTI1SK/RtoyzL+364YoGsCJB6Hht0Zhb1f+XsDlDFNzaAw=="
+            }
+          }
+        }
+      }
+    },
+    "mascot-robot": {
+      "title": "Omni",
+      "description": "Omni : IA suzeraine · thème néon",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-robot-0.1.0/mascot-robot-0.1.0.tgz",
+              "size": 5962,
+              "sha256": "e0cff2d24e465fb24648bc23c1ea5e36982a07c93ff946148fc265b5ff979cb8",
+              "signature": "eQpiSESUO7Se11ib7+xtlM8t9rhGkGF3WAgoMhMGHGZaniLwV4X4MjVmJYDSaKIB++DZBe9pCZRj0FU8nWWXAQ=="
+            }
+          }
+        }
+      }
+    },
+    "mascot-sprout": {
+      "title": "Sprout",
+      "description": "Sprout : Escargot jardinier · thème serre",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-sprout-0.1.0/mascot-sprout-0.1.0.tgz",
+              "size": 6397,
+              "sha256": "b4d67d82989a196c7d07533d9c7b4037b102395fe33fcf5af9de817a9739d34f",
+              "signature": "gBv1CT6lA1cfePp65Hlz856BJsDbChSof7Rwt8Tk+ArNpS6QC3/MIlKl8fu+bdea6VwvMxBZ3i7SISt0yFgdAA=="
+            }
+          }
+        }
+      }
+    },
+    "matrix": {
+      "title": "Matrix",
+      "description": "Messagerie Matrix chiffrée : conversations, conversations de tâche, clins d'œil, visios",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "linux-x64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/matrix-0.1.0/matrix-0.1.0-linux-x64.tgz",
+              "size": 10428515,
+              "sha256": "dc5eb0295da5e967a5d928b32276bcae49db15bdb78d812c173655724707b5a8",
+              "signature": "Mn3ryrYfFjPUaf7p27GYx6BN8zJ7TEyMtVtk9+UD8yN01d1KydcsKNIkhNDlwjwM+NjOGSOkJnqAOnIpN7cHAw=="
+            }
+          }
+        }
+      }
+    },
+    "notion": {
+      "title": "Notion",
+      "description": "Tâches Notion : la source du Kanban (rôle tasks)",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/notion-0.1.0/notion-0.1.0.tgz",
+              "size": 6947,
+              "sha256": "b457621d473549f39d7ae6b9d3b846c9847a27db8c9180b033c634068b289965",
+              "signature": "M/nkTKpmACSBnDnHpl442nMUOLg+GcNFOOzvzUpWeCIYsvGTp1xy0VtBWZQVryG1pHSrrR3M9NJLIK85vshkAg=="
+            }
+          }
+        }
+      }
+    },
+    "temps": {
+      "title": "Temps",
+      "description": "Temps : la journée reconstituée depuis git et la source de tâches, envoyée au Time Log",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {
+            "git": "^0.1.0"
+          },
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/temps-0.1.0/temps-0.1.0.tgz",
+              "size": 12714,
+              "sha256": "64bb46695a1bf6499400c011f394adefea518ea336ad56b6c54865fef1663feb",
+              "signature": "n2j9fjUj+bneSB/7eXrsGYzeibaOrSaKHMy2uYhm0akRnbgcxYUDU1BmLLsMuRLLRaku4n1lRckCQXVaE8uZCA=="
+            }
+          }
+        }
+      }
+    },
+    "terminal": {
+      "title": "Terminal",
+      "description": "Terminal : le shell de l'utilisateur en onglets, et ce que les autres extensions y lancent",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/terminal-0.1.0/terminal-0.1.0.tgz",
+              "size": 1533865,
+              "sha256": "e96a0b933eb43dd351043d5dd50f9fd232b9add779400fc0de5207df9e409a97",
+              "signature": "6Eb/WH/Vrh4I9nkGfAv9+a9mVm7SSjAN3xwTtc3Fxh6X62mE4sNE3bGXNE1tfxO7sgDw7z1X3Qb3bhy+mLv+Aw=="
+            }
+          }
+        }
+      }
+    }
+  }
+}

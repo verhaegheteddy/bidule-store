@@ -506,6 +506,22 @@
               "signature": "Nw4aEJb+o3wLPtecH95o2SuFU2viZ2mDPPRy0rMZFI8IvyiuTNgJwVvkLpy7q1OAzZnh/FG0dg0WH4bDZfBjCA=="
             }
           }
+        },
+        "0.1.2": {
+          "engine": "^0.1.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "providers",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/notion-0.1.2/notion-0.1.2.tgz",
+              "size": 9910,
+              "sha256": "d53518023e3dd2b7a8c450731bafe1ade7ff4d2f2b98b3202eaf20a280f61c75",
+              "signature": "Xl9YDfFYcgo5pXIeY113ksFZeIAdPkWdn0s9+Q59oeRQKSSNdZtdUSATkIFINHnSPPZEYYU1YGvXvc7q4FWhAg=="
+            }
+          }
         }
       }
     },
@@ -666,6 +682,22 @@
               "signature": "X88PAgQccianxO6Pvm00VEQrJJUM7jsCxu//gEUwPloKL68HZI1e7N8ZYO3Rhrb+CRIfSXZyz6CPqU1B+x8EAg=="
             }
           }
+        },
+        "0.1.1": {
+          "engine": "^0.1.2",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/kanban-0.1.1/kanban-0.1.1.tgz",
+              "size": 7645,
+              "sha256": "ee4f6820a5da3183219305cf74f2469307dae1db9544be0cd527c46725327cba",
+              "signature": "lK53fRlnNTyYx0oNwgi+UWecVfYMe1lekhFRfEp+q+vQl8UvePXZrsqlpWMCZvFm1jraW8AMeLheFUOOA0PCCQ=="
+            }
+          }
         }
       }
     },
@@ -688,6 +720,24 @@
               "size": 115954293,
               "sha256": "23bbd00bdf0c4cd151458d8e1aa73dc0e0ae81bd4dc7d5c4ca1821525b84ebe1",
               "signature": "1k9iuJZnUKjYrmlSikpBz3SV1Bp1i9UbV53E/F8RZb9PUB73CZ53DIHavhssCZNEGorhR7OqTgHC6YW2DxZ+AA=="
+            }
+          }
+        },
+        "0.1.1": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [
+            "shell"
+          ],
+          "kind": "modules",
+          "unofficial": true,
+          "released": "2026-10-01",
+          "packages": {
+            "linux-x64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/lunar-industries-claude-0.1.1/lunar-industries-claude-0.1.1-linux-x64.tgz",
+              "size": 115953881,
+              "sha256": "474f0cca9e3f7af9d3a33af705ac13a9e9d90d094fa9ef457f17be6c5d70ff09",
+              "signature": "ArjCCtMyTMUC62d+XStfaXHXdYbovUk5vye5TgVFqKpiixDlE2qcAk6f46VBlWzwJn4auBBcKnsPdmZnTZ5FAQ=="
             }
           }
         }
@@ -776,6 +826,72 @@
               "size": 6786,
               "sha256": "2187c4a02f47110833ee593a51e2b9cc4281452d6a653eef5a27e7150c21ac97",
               "signature": "j3T3q0X75t7E75vWrCh6lEtvcK/d98hvLW+F9rFl0UYcGFzpMCeDYDojUGg5Jubchi+Dw38acc56b1elXZc+Ag=="
+            }
+          }
+        }
+      }
+    },
+    "lunar-industries-branches": {
+      "title": "Lunar Industries - Branches",
+      "description": "Les branches, version Lunar Industries : une liste par dépôt avec l'étape de chaque branche (tâche, revue, CI, fusion), et le détail pour lier une tâche, ouvrir la MR, relancer un pipeline ou lancer un job manuel",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": true,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/lunar-industries-branches-0.1.0/lunar-industries-branches-0.1.0.tgz",
+              "size": 15087,
+              "sha256": "e137e87260c2ba04bbd98d4a84429d1f5def5ac9b6845317a2b15f2e07a3ac2d",
+              "signature": "w52sY0ICaxKu7rAclLkteLetkQb1eCuq9d1UavqwnAO14TOvt0L3FNhbR9qUryWvxkyLOlOZwLkHBjsU6BsFCA=="
+            }
+          }
+        }
+      }
+    },
+    "lunar-industries-kanban": {
+      "title": "Lunar Industries - Kanban",
+      "description": "Le Kanban, version Lunar Industries : colonnes groupées par étape, branches récentes sans tâche à glisser sur une carte, pastilles de revue et de CI, branches d'une tâche à cocher",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.2",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": true,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/lunar-industries-kanban-0.1.0/lunar-industries-kanban-0.1.0.tgz",
+              "size": 12651,
+              "sha256": "ee65c07645f43a6b527c6b1b265107029e3f25bd239cd179086786ba947faaa0",
+              "signature": "xt1Xw+lzCL5LvEzQ4iWIB4CqeP7KKbCLGFACn8/U9aB+UXF+i8NOiEbImF7xYTTXmmNBvOEbVemoeIGarGqwAw=="
+            }
+          }
+        }
+      }
+    },
+    "lunar-industries-temps": {
+      "title": "Lunar Industries - Temps",
+      "description": "Le temps de la journée, version Lunar Industries : une journée qui vaut 1 répartie en lignes tâche-étiquette par vingtièmes, proposée depuis git et les tâches, semaine et calendrier, absences et déploiements, envoyée au Time Log",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": true,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/lunar-industries-temps-0.1.0/lunar-industries-temps-0.1.0.tgz",
+              "size": 27829,
+              "sha256": "97b12a0eeb0746db36cb01ebdc984735cde04913b579d8ed918154ba4528b234",
+              "signature": "XdIyUEornYnve88Ox+KeuGz6YrXFyeG8wgqvPGS8UwqVW4LM4Bh5+xU1QiZWwqkzXe+1zTc/gIJSsQ442S1cCA=="
             }
           }
         }

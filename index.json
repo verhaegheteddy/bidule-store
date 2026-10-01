@@ -629,9 +629,21 @@
           "packages": {
             "linux-x64": {
               "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/matrix-0.1.5/matrix-0.1.5-linux-x64.tgz",
-              "size": 10474927,
-              "sha256": "e5fb536f576a64d9562227fc4750e63770ae6eac581fe9672941704e90f28e5a",
-              "signature": "kmtIUAXUadP7c2FbR4/EYOhoPf7CgfqX0GKQndOYAHMOhHIjKF17WHzrnp/sW+nlWLZyUF802/EVHls+PUn2AQ=="
+              "size": 10474914,
+              "sha256": "feab594fd3a1673714e7ea00fbd11f2b1b539d6c0cdf456b23fa66a9c554485a",
+              "signature": "VJF3mqikvEoeZO7o15m0ii3fqWMh1HEj5xMznCf4eY1uyfdxpFqpGpGzLCnL9/RdzsKGTwoVPaaHJfE3GoqXAg=="
+            },
+            "win32-x64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/matrix-0.1.5/matrix-0.1.5-win32-x64.tgz",
+              "size": 9355394,
+              "sha256": "a3f025f0512318f4c1732eb5e83d56b993d8a8b9458e9f0c0f02435a52819636",
+              "signature": "FtTMWtrsB6OkkfotHr6fS+932/b8s9kY/5jx4TyEYK6DYmo+lpOgKyeu8Hqh7sVjYM3FUru+Ub/Z+ZXC72rbDA=="
+            },
+            "darwin-arm64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/matrix-0.1.5/matrix-0.1.5-darwin-arm64.tgz",
+              "size": 8659077,
+              "sha256": "0ed03605b5badb7fad8babc01c7b3b6706927ed525a427f023f59b2c8d53aec6",
+              "signature": "HzUDrCXGghxQyaU+2XK7eBZ9T56GzIV7wKB//+aqfRZ9ATBGl7sWnTl/3dp8ISjee2kPVRU+mSpAe78UCkI3DQ=="
             }
           }
         }

@@ -6,8 +6,9 @@ const BASE = '/api/ext/lunar-industries-branches'
 
 async function json<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(path, { ...init, headers: { 'Content-Type': 'application/json', Accept: 'application/json' } })
-  const body = (await res.json().catch(() => ({}))) as { error?: string; errors?: { message: string }[] }
-  if (!res.ok) throw new Error(body.error ?? body.errors?.[0]?.message ?? `Erreur ${res.status}`)
+  const body = (await res.json().catch(() => ({}))) as { error?: string; errors?: { message: string }[]; message?: string }
+  // `message`: the core's own answer to an error the module did not catch (a 500), its reason rather than its status.
+  if (!res.ok) throw new Error(body.error ?? body.errors?.[0]?.message ?? body.message ?? `Erreur ${res.status}`)
   return body as T
 }
 

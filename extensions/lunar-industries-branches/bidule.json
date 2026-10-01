@@ -1,6 +1,6 @@
 {
   "id": "lunar-industries-branches",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "title": "Lunar Industries - Branches",
   "engine": "^0.1.1",
   "contributes": {

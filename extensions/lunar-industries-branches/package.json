@@ -1,6 +1,6 @@
 {
   "name": "@bidule/ext-lunar-industries-branches",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Les branches, version Lunar Industries : une liste par dépôt avec l'étape de chaque branche (tâche, revue, CI, fusion), et le détail pour lier une tâche, ouvrir la MR, relancer un pipeline ou lancer un job manuel",
   "type": "module",

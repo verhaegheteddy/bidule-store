@@ -58,6 +58,24 @@
               "signature": "/97M5z9exxHA9W4fGSTqdpTuGINE9CRSDotJiJwaxx9gpkRMfySb04ohHuTjjTI02GA/eqdbxXbK3dV0GiUjCw=="
             }
           }
+        },
+        "0.1.6": {
+          "engine": "^0.1.3",
+          "dependencies": {},
+          "permissions": [
+            "shell"
+          ],
+          "kind": "modules",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/claude-0.1.6/claude-0.1.6.tgz",
+              "size": 51061,
+              "sha256": "2d5cff22df812c9a52ad0fbe46f73672872e97f19c41f7fd59a35645db2e7500",
+              "signature": "oK31KcySsbmF9XaNYNn/mddKOsEX4dHyHZ0cAB4esTYuc1gpGqxtgcBWP6eGJPPqC5llx/8bD++k+zIFM+IHAg=="
+            }
+          }
         }
       }
     },
@@ -136,6 +154,22 @@
               "signature": "4vAiTjNWJ5KQRuI5bAXoRZrDrVQNkuf9imAhJe2T4DlZEq6G8igW6tgl9L20oRRE+fifSWsKnDJnZmGBYrGTBg=="
             }
           }
+        },
+        "0.3.2": {
+          "engine": "^0.1.3",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/git-0.3.2/git-0.3.2.tgz",
+              "size": 17768,
+              "sha256": "9daf18f6366978d7e477cfb8189520fe15a37aef321068bc144417861824585a",
+              "signature": "6LMCir4Cw0Egj/fHyf3gvF4A9Q39eQPUbf87wOEk3edbLwlyLixahzGzLaPSg2qsBlqF8j2rFg8y5qWnRvWUBA=="
+            }
+          }
         }
       }
     },
@@ -190,6 +224,22 @@
               "signature": "Df5w9xvmGiN7ly0ahluZDSolS5NGgqqL1uc9DmHMlaxSxSKtDAa1X84UlLGhAjSf0516i0ARlbdkuB2IS6XFCQ=="
             }
           }
+        },
+        "0.1.4": {
+          "engine": "^0.1.3",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/github-0.1.4/github-0.1.4.tgz",
+              "size": 3707,
+              "sha256": "93dc5e29b02373114d1476d50f3cc2368aa3fe0a34bd28b2656a9cb29ab1f1cf",
+              "signature": "bOt9OyzIi5PKfV0TbXQhMbI2o1Du2yc0xsNptqFi6rjJKm4sfgJGvhhr6p7pCAvG8U8D4G+Pwnu9+e/5d/GfBQ=="
+            }
+          }
         }
       }
     },
@@ -242,6 +292,22 @@
               "size": 3368,
               "sha256": "51c17486d8378821358a980d445440370cf073641f6b17aecea7a178fc3e5cf7",
               "signature": "sXbezvkGv1yzztzZkhF8Saw8zm4RSaQ7bQms62kA/+bRAczaO1vFja2ru/jPLLfPWRp5iWQdjuur2OaVnVMGBg=="
+            }
+          }
+        },
+        "0.1.4": {
+          "engine": "^0.1.3",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/gitlab-0.1.4/gitlab-0.1.4.tgz",
+              "size": 3441,
+              "sha256": "85faf543ebf9b8f655bb183929369c317d1b08605c3e9c672e1c821ccdfab4b8",
+              "signature": "38B6J7QQ4SGTk1TJkYNaGIa14s5RmjLAA2FReto3aGjl/h5UQJm52Ed0CxziO58J4awqYkLj5RVlYFgWi4SRAw=="
             }
           }
         }
@@ -760,6 +826,24 @@
               "signature": "+GPD5QnVhpHEqyLb+t4XjNa6vYzKs2QMt8OEDsltq/YtsI/lf0N/soKkHBv3UDE07UD5DedzTQgrOX/ejZlTAw=="
             }
           }
+        },
+        "0.1.9": {
+          "engine": "^0.1.3",
+          "dependencies": {},
+          "permissions": [
+            "shell"
+          ],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/terminal-0.1.9/terminal-0.1.9.tgz",
+              "size": 1781852,
+              "sha256": "5953f1d624893b9b6611378f95748c84290441d85551df722a6fba55d97a0eae",
+              "signature": "5RQMarepLIfE8/tNXV77brN80RG1SI1BNqvBi9j2UOOnbwFSvu1ruIUqCXjqyqHYwfywqzuUZ4TPkcV24YZIDQ=="
+            }
+          }
         }
       }
     },
@@ -806,8 +890,8 @@
       }
     },
     "branches": {
-      "title": "Branches",
-      "description": "Branches des tâches : la page, leur création et la bascule, leurs pastilles et conseils sur le Kanban",
+      "title": "Git",
+      "description": "Git : l'état de tes dépôts (branche, modifications, à pousser ou à tirer, récupérer, tirer, pousser), l'étape de chaque branche avec son action suivante sur la forge, les notifications de CI et de revue ; la branche d'une tâche, sa création et la bascule, et leurs pastilles et conseils sur le Kanban",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.1",
@@ -822,6 +906,22 @@
               "size": 11310,
               "sha256": "14cef97b0fd03d0e4409f6dd6560cff9ef0d44febffc37fd738c45ac02730a3a",
               "signature": "jXy1veEs4ruNEBMfqwe4bNoTXMV2LK/4L1EIyJLtUiA/zc3OIaWX3OhBgNa2PX9/lLRV07C9K3qOuZFQGwAlAw=="
+            }
+          }
+        },
+        "0.2.3": {
+          "engine": "^0.1.3",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": false,
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/branches-0.2.3/branches-0.2.3.tgz",
+              "size": 34863,
+              "sha256": "273997dcff749975c100db4dfa01e975c2a5815387aca1e00090b0c937c24fd9",
+              "signature": "keHRKxFD38RlhpCc34Mfh5OuUvMeCP5M3JF1x7zLfKGv1Odz0O6VaQOvWuJmy++MlnE+gF1lce+RfdqN2x0WCw=="
             }
           }
         }

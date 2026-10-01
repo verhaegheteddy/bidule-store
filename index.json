@@ -49,26 +49,6 @@
         }
       }
     },
-    "exemple": {
-      "title": "Exemple",
-      "description": "Extension modèle : une page, une commande, un événement, un réglage, un secret, une table",
-      "versions": {
-        "0.1.0": {
-          "engine": "^0.1.0",
-          "dependencies": {},
-          "permissions": [],
-          "released": "2026-10-01",
-          "packages": {
-            "any": {
-              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/exemple-0.1.0/exemple-0.1.0.tgz",
-              "size": 12544,
-              "sha256": "37209d1bc5f290cd42c14a5fee224e941814c8c82041a742135fea30767659fa",
-              "signature": "UOvpiAJ4qdGbwkDDGu4WiwaaISFFs+m8kmr2bTAiqn/CpUHx5J3KzWHOnJTymIGgiDy4+TbkZKebNv/3QsrjBw=="
-            }
-          }
-        }
-      }
-    },
     "git": {
       "title": "git",
       "description": "Dépôts git locaux : branches des tâches, activité, création et bascule de branche",

@@ -434,6 +434,28 @@
           }
         }
       }
+    },
+    "lunar-industries-containers": {
+      "title": "Lunar Industries - Conteneurs",
+      "description": "Les conteneurs Docker et Podman, version Lunar Industries : projets Compose encadrés, sélection et actions groupées, ressources, et la fiche d'un conteneur (journaux suivis, statistiques, fichiers)",
+      "versions": {
+        "0.1.0": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [
+            "shell"
+          ],
+          "released": "2026-10-01",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/lunar-industries-containers-0.1.0/lunar-industries-containers-0.1.0.tgz",
+              "size": 27300,
+              "sha256": "b7b4952bf6efd5965aa63b8334b6067880e941840431d7a3d05ab559a1c4a019",
+              "signature": "32kXdyQAnW+4pVLk+D1C3PbPSTHKyowfMAuQ4P74oGbSlFLUZSsp2VRoH6Os3PXepWsp/MiRjgyDVlkq4ylrCQ=="
+            }
+          }
+        }
+      }
     }
   }
 }

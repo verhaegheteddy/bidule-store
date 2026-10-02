@@ -1,6 +1,6 @@
 {
   "name": "@bidule/ext-lunar-industries-claude",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "description": "Claude Code dans l’app, version Lunar Industries : sessions par l’Agent SDK (décisions, plan, questions, modèle, effort, coût), outils de l’espace de travail (tâche, worktrees, MR, pipelines, déploiement) et skills de l’équipe",
   "type": "module",

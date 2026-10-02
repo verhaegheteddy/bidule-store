@@ -1,5 +1,6 @@
 import type { ServerContext } from '@bidule/api/extensions'
-import '@bidule/ext-git/contract'
+// Its roles' types only: erased once compiled (the app has no @bidule/ext-git package to load at run time).
+import type {} from '@bidule/ext-git/contract'
 import '../contract.ts'
 import { KanbanService } from './service.ts'
 

@@ -1,6 +1,6 @@
 {
   "name": "@bidule/ext-lunar-industries-kanban",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Le Kanban, version Lunar Industries : colonnes groupées par étape, branches récentes sans tâche à glisser sur une carte, pastilles de revue et de CI, branches d'une tâche à cocher",
   "type": "module",

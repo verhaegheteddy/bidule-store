@@ -646,6 +646,34 @@
               "signature": "HzUDrCXGghxQyaU+2XK7eBZ9T56GzIV7wKB//+aqfRZ9ATBGl7sWnTl/3dp8ISjee2kPVRU+mSpAe78UCkI3DQ=="
             }
           }
+        },
+        "0.1.6": {
+          "engine": "^0.1.5",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-02",
+          "packages": {
+            "win32-x64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/matrix-0.1.6/matrix-0.1.6-win32-x64.tgz",
+              "size": 9355626,
+              "sha256": "2f83c1263ff35031dda7c6d2b911ee1bdb536558e98a12469d4dc7fb0ed90c27",
+              "signature": "gIY06dODX1sp5SSNYnDUSYTsd4UjpLHPQyFyJUtoUgjd9Wv79/g9+GR0k9649Fn55EDn0TBzXaT+9iUf+d5sAg=="
+            },
+            "linux-x64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/matrix-0.1.6/matrix-0.1.6-linux-x64.tgz",
+              "size": 10475176,
+              "sha256": "2165312875cb0849ddd5b21e4c2e273b726208c0748f5bb306627a479699430f",
+              "signature": "OSMNEVv61AeLtPA2TFT5nFk3c2362W0OPc/Bm85lE/dJ5UceHXyLE9YwMsbPSbRuXtP3c2OUpaYSHany+KaUDA=="
+            },
+            "darwin-arm64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/matrix-0.1.6/matrix-0.1.6-darwin-arm64.tgz",
+              "size": 8659267,
+              "sha256": "093117f7914960ad32b3b1691477917cc8e32c147aab365239744eedce195234",
+              "signature": "0qhxaqsZfZyqsZl+04MadyRJoY/2BiPq1hr5wOkFQ/1IwTddsyvSxK2aE1AyyLhdWwBESJkwBBMcP6vC8yASBg=="
+            }
+          }
         }
       }
     },
@@ -872,6 +900,24 @@
               "size": 1784001,
               "sha256": "37db157bacedf608136d7fe828c679ed22642c7fd2428cd883cd895771704d15",
               "signature": "xfO0z5A+RBWai3S8mkDia48rWlmaytwwPwiRFUCYWEvc8y/06Yg9aFmjQ4vCbwxV2fNPTUnzJDPpOukSdPJ8DQ=="
+            }
+          }
+        },
+        "0.1.11": {
+          "engine": "^0.1.5",
+          "dependencies": {},
+          "permissions": [
+            "shell"
+          ],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-02",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/terminal-0.1.11/terminal-0.1.11.tgz",
+              "size": 1784909,
+              "sha256": "810a779dadeb69ee5466fe44e0a79c16bb9f8759ee85ec0ae44b70690c677c6b",
+              "signature": "gU6XvQudKxoVWq/MctxjwalhyyQw5jq2NJ5EKLGsz/WTZp1NOplMcavnJ47luqydGJPj9c2qmdS3TzlsQ09QDA=="
             }
           }
         }

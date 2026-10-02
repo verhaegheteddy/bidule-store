@@ -1092,6 +1092,36 @@
               "signature": "wxBkMNJl8BKoqlMnHxLZ3YFBzRoHGz6Pb9QDvwam1Y2MDvJR63jstISbP2EkouNhz4K6ewoVLbgzXf/cGGk7DQ=="
             }
           }
+        },
+        "0.1.2": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [
+            "shell"
+          ],
+          "kind": "modules",
+          "unofficial": true,
+          "released": "2026-10-02",
+          "packages": {
+            "win32-x64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/lunar-industries-claude-0.1.2/lunar-industries-claude-0.1.2-win32-x64.tgz",
+              "size": 118810339,
+              "sha256": "8aeb848a66b98e3721e8be37cd994b91b63d9bed08519835a06c2ea05fb7961b",
+              "signature": "yEwusy1sR64yoNEAdnjqtyXGU5meQ9Ilorxju5wPl7U8ft5nFM+/agGEN6R5BLEOcpwSn4WenhOymuURnJq0CA=="
+            },
+            "linux-x64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/lunar-industries-claude-0.1.2/lunar-industries-claude-0.1.2-linux-x64.tgz",
+              "size": 115954418,
+              "sha256": "de3fcc768ab279753e2fb0b38f6be607ba4f83249d2f832d9e755f4689833d12",
+              "signature": "J2hzXCh1wAB0iQpAO2cJ3cbzO6odhMBWjtwwy0Hiuf30GsLgOI25nFeG4mp/D8f1PL5nI4Bk7ZF7v6L+Ea/cAg=="
+            },
+            "darwin-arm64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/lunar-industries-claude-0.1.2/lunar-industries-claude-0.1.2-darwin-arm64.tgz",
+              "size": 106110115,
+              "sha256": "2ae19a1746cf873e76a206acfbb9b34e52eebb0f28ddfb2182ce1527de09f240",
+              "signature": "Y45mo9czjv0ABfMvLn9JA0BcpIfJjcFf6XOsM8l5aLgKiFH6qKNEPwMe/n/EWV2GaCPq8kdBr8Wfse40fr1MCw=="
+            }
+          }
         }
       }
     },
@@ -1218,6 +1248,22 @@
               "signature": "nfxWIUlq88bklVYXxoQb7Sbqr50V/VVeD6R09BIq/PYzAfF0Xrv18GoRJHjWmQN8GECCEV59JVOuelojR66AAw=="
             }
           }
+        },
+        "0.1.2": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": true,
+          "released": "2026-10-02",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/lunar-industries-branches-0.1.2/lunar-industries-branches-0.1.2.tgz",
+              "size": 15083,
+              "sha256": "8a4e01692befa236897c61434b4fc055237aad792a8130575b207455fcbc60de",
+              "signature": "wLlzI6+UOXJ/MNByWVQ6hsfw33+8WUXRHFZys0T2e6pROkGotmn6ZEAHidyrk0l3aQV7BSFnUuwDWyKb66tqBw=="
+            }
+          }
         }
       }
     },
@@ -1240,6 +1286,22 @@
               "signature": "xt1Xw+lzCL5LvEzQ4iWIB4CqeP7KKbCLGFACn8/U9aB+UXF+i8NOiEbImF7xYTTXmmNBvOEbVemoeIGarGqwAw=="
             }
           }
+        },
+        "0.1.1": {
+          "engine": "^0.1.2",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": true,
+          "released": "2026-10-02",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/lunar-industries-kanban-0.1.1/lunar-industries-kanban-0.1.1.tgz",
+              "size": 12642,
+              "sha256": "25b930d5b507a835598fa1a1226a9c6708132ae136d9e3220a10ddfc020b3467",
+              "signature": "QsWzbp5W3I2yqz3PrnHeLogLw9pvNKfK3vdx9QiVfoxHuxEuCiRBAFbr4Dpdabh5mycoSNJogy7p8x+ZJRtoCQ=="
+            }
+          }
         }
       }
     },
@@ -1260,6 +1322,22 @@
               "size": 27829,
               "sha256": "97b12a0eeb0746db36cb01ebdc984735cde04913b579d8ed918154ba4528b234",
               "signature": "XdIyUEornYnve88Ox+KeuGz6YrXFyeG8wgqvPGS8UwqVW4LM4Bh5+xU1QiZWwqkzXe+1zTc/gIJSsQ442S1cCA=="
+            }
+          }
+        },
+        "0.1.1": {
+          "engine": "^0.1.1",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": true,
+          "released": "2026-10-02",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/lunar-industries-temps-0.1.1/lunar-industries-temps-0.1.1.tgz",
+              "size": 27817,
+              "sha256": "a5976fc43d6dff19083e2267fc2afbbb94678622a0b61845ff70f40d3f046c00",
+              "signature": "424AYH9qD8P1EecQEtthPMwIH+WLW+aVENi5xXXr7sjr4HwK5ejmiFKhWWlXYUXPWOdAmdQCRsegXPsKwMGcCA=="
             }
           }
         }

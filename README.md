@@ -23,3 +23,7 @@ dans leur `package.json`. Ils respectent les contrats des modules officiels ; on
 Réglages › Extensions pour installer le leur. Ils se construisent, se signent et se publient par le workflow
 Extensions de Bidule ; on y travaille en clonant ce dépôt dans le checkout de Bidule (`bidule-store/`) puis
 `npm run store:link` (voir `docs/distribution.md` de Bidule).
+
+Un module communautaire peut aussi vivre dans le store de son auteur, signé par la clé de ce store : Bidule peut
+suggérer ce store dans Réglages › Stores (voir « Être suggéré par Bidule » dans
+[docs/creer-un-store.md](docs/creer-un-store.md)).

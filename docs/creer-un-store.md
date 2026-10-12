@@ -116,6 +116,18 @@ cd build/lunar-notes && npm install --omit=dev && tar czf ../../lunar-notes-0.1.
 Avec du code natif (un fichier `.node`, un programme par système), faites un paquet par système et donnez sa
 plateforme (`linux-x64`, `win32-x64`, `darwin-arm64`…) ; sinon la plateforme est `any`.
 
+Ce que Bidule vérifie en installant un paquet :
+
+- sa taille : le téléchargement s'arrête dès qu'il dépasse la taille que l'index annonce (`size`, celle du fichier
+  exactement), et un paquet de plus de 512 Mio n'est jamais proposé ;
+- son empreinte (`sha256`) et sa signature, avec la clé du store qui le propose ;
+- son `bidule.json`, qui doit dire ce que l'index dit de sa version : `id`, `version`, `engine`, `permissions` (dans
+  n'importe quel ordre) et `dependencies`. Le dialogue d'installation montre les permissions de l'index : un paquet
+  qui en demande d'autres est refusé.
+
+Seuls les fichiers et les dossiers de l'archive sont décompressés : un lien symbolique (ceux que `npm install` pose
+dans `node_modules/.bin`, par exemple) ou un lien physique est ignoré. Ne comptez donc sur aucun lien à l'exécution.
+
 ## 3. L'index
 
 `index.json`, tel que Bidule le lit :
@@ -153,6 +165,11 @@ plateforme (`linux-x64`, `win32-x64`, `darwin-arm64`…) ; sinon la plateforme e
 L'app propose la version la plus récente dont `engine` accepte son cœur et qui a un paquet pour son système (ou
 `any`). Gardez les anciennes versions : une app plus ancienne en a besoin.
 
+Une version s'écrit `x.y.z`, sans préversion : l'app écarte `1.0.0-beta` (elle ne sait pas l'ordonner), et une
+extension qui n'a que des préversions n'est pas proposée. Une version publiée ne change plus de manifeste : pour
+changer ses permissions, son `engine` ou ses dépendances, publiez une nouvelle version. Ajouter à une version le
+paquet d'un autre système reste possible.
+
 `tools/sign-package.mjs` (dans ce dépôt, Node seul, sans dépendance) remplit tout ça pour un paquet déjà construit :
 
 ```sh
@@ -161,7 +178,9 @@ node tools/sign-package.mjs --key ~/store-private.pem --index index.json \
 ```
 
 Il lit `bidule.json` et `package.json` dans le paquet, calcule taille, sha256 et signature, et ajoute la version à
-l'index (en le créant s'il n'existe pas). Ses tests : `node --test tools/sign-package.test.mjs`.
+l'index (en le créant s'il n'existe pas). Il refuse une préversion, et une version déjà dans l'index dont le
+manifeste a changé ; il ajoute le paquet d'un autre système à une version déjà publiée, et prévient quand il remplace
+celui d'un même système. Ses tests : `node --test tools/sign-package.test.mjs`.
 
 ## 4. Héberger
 
@@ -185,3 +204,47 @@ Réglages › Stores › **Ajouter un store** : un nom, l'adresse de l'index, la
 `store-public.pem`). Bidule lit l'index aussitôt et refuse un store qui ne répond pas. Ses extensions apparaissent dans
 la liste, marquées « Communautaire · <nom du store> ». Retirer un store laisse en place ce qui en a été installé, sans
 plus de mises à jour.
+
+## 6. Être suggéré par Bidule
+
+Le store de Bidule peut suggérer d'autres stores : Réglages › Stores les montre sous la liste, sous le titre « Stores
+suggérés par Bidule », et l'utilisateur en ajoute un d'un clic, après l'avertissement habituel. Rien n'est ajouté sans
+lui. La liste est le champ `suggestedStores` de l'`index.json` de ce dépôt :
+
+```jsonc
+{
+  "schema": 1,
+  "extensions": { … },
+  "suggestedStores": [
+    {
+      "name": "Mon store",                                          // 60 caractères au plus
+      "description": "Ce que proposent ses extensions",            // 200 caractères au plus
+      "url": "https://raw.githubusercontent.com/<vous>/<dépôt>/main/index.json",
+      "key": "-----BEGIN PUBLIC KEY-----\n…\n-----END PUBLIC KEY-----"
+    }
+  ]
+}
+```
+
+Chaque suggestion est vérifiée comme un ajout à la main (index en https, clé publique ed25519) ; une suggestion mal
+formée est simplement ignorée. Bidule ne lit ce champ que dans son propre index : un store ajouté ne suggère rien.
+
+Pour être suggéré, demandez-le au mainteneur de Bidule, par une issue ou une pull request sur ce dépôt, avec le nom,
+la description, l'adresse de l'index et la clé publique de votre store. Ce que le mainteneur regarde :
+
+- les sources de vos extensions sont publiques, et la clé publique du store est publiée dans son dépôt ;
+- vos extensions respectent les contrats du cœur de Bidule (objets, actions, commandes, événements, rôles), avec
+  leurs propres ids, chemins de page, tables et réglages.
+
+Bidule montre l'empreinte de chaque clé suggérée, pour que l'utilisateur la compare à celle que vous publiez :
+`SHA256:` suivi du sha256 de la clé publique en DER, en base64 sans le `=` final. La vôtre :
+
+```sh
+openssl pkey -pubin -in store-public.pem -outform DER | openssl dgst -sha256 -binary | openssl base64 | tr -d '='
+```
+
+Une suggestion retirée de l'index ne retire rien chez ceux qui ont ajouté le store. Une extension que Bidule propose
+elle-même garde son id : tant qu'il est dans l'index de Bidule, votre store est ignoré pour lui. Quelqu'un qui a
+installé une de vos extensions depuis le store de Bidule la garde, sans mises à jour, quand son id quitte cet index ;
+pour la reprendre depuis votre store, il la retire, redémarre Bidule, puis l'installe depuis votre store (ses données
+restent).

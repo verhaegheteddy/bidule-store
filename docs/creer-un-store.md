@@ -126,7 +126,11 @@ Ce que Bidule vérifie en installant un paquet :
   qui en demande d'autres est refusé.
 
 Seuls les fichiers et les dossiers de l'archive sont décompressés : un lien symbolique (ceux que `npm install` pose
-dans `node_modules/.bin`, par exemple) ou un lien physique est ignoré. Ne comptez donc sur aucun lien à l'exécution.
+dans `node_modules/.bin`, par exemple) ou un lien physique est ignoré. Ne comptez donc sur aucun lien à l'exécution ;
+`tools/sign-package.mjs` refuse d'ailleurs un paquet qui en contient (créez l'archive sans eux, par exemple
+`tar czf … --exclude=node_modules/.bin *`). Bidule refuse aussi un paquet dont un chemin porte un nom que Windows
+réserve à un périphérique (`CON`, `PRN`, `AUX`, `NUL`, `COM1` à `COM9`, `LPT1` à `LPT9`, avec ou sans extension), et
+un paquet qui se décompresserait au-delà de seize fois sa taille (au moins 64 Mio, au plus 2 Gio).
 
 ## 3. L'index
 
@@ -227,7 +231,8 @@ lui. La liste est le champ `suggestedStores` de l'`index.json` de ce dépôt :
 ```
 
 Chaque suggestion est vérifiée comme un ajout à la main (index en https, clé publique ed25519) ; une suggestion mal
-formée est simplement ignorée. Bidule ne lit ce champ que dans son propre index : un store ajouté ne suggère rien.
+formée est simplement ignorée, de même qu'une seconde suggestion de la même adresse. Bidule ne lit ce champ que dans
+son propre index : un store ajouté ne suggère rien.
 
 Pour être suggéré, demandez-le au mainteneur de Bidule, par une issue ou une pull request sur ce dépôt, avec le nom,
 la description, l'adresse de l'index et la clé publique de votre store. Ce que le mainteneur regarde :
@@ -236,12 +241,21 @@ la description, l'adresse de l'index et la clé publique de votre store. Ce que 
 - vos extensions respectent les contrats du cœur de Bidule (objets, actions, commandes, événements, rôles), avec
   leurs propres ids, chemins de page, tables et réglages.
 
-Bidule montre l'empreinte de chaque clé suggérée, pour que l'utilisateur la compare à celle que vous publiez :
-`SHA256:` suivi du sha256 de la clé publique en DER, en base64 sans le `=` final. La vôtre :
+Bidule montre l'empreinte de chaque clé suggérée, pour que l'utilisateur la compare à celle que vous publiez. C'est
+celle qu'OpenSSH donne à la clé (`SHA256:…`). Avec la clé privée :
 
 ```sh
-openssl pkey -pubin -in store-public.pem -outform DER | openssl dgst -sha256 -binary | openssl base64 | tr -d '='
+ssh-keygen -lf store-private.pem
 ```
+
+Avec la clé publique seule (sa forme SSH : le type, puis les 32 octets de la clé) :
+
+```sh
+(printf '\0\0\0\013ssh-ed25519\0\0\0\040'; openssl pkey -pubin -in store-public.pem -outform DER | tail -c 32) \
+  | openssl dgst -sha256 -binary | openssl base64 | tr -d '='
+```
+
+La seconde commande donne la même suite de caractères, sans le préfixe `SHA256:`.
 
 Une suggestion retirée de l'index ne retire rien chez ceux qui ont ajouté le store. Une extension que Bidule propose
 elle-même garde son id : tant qu'il est dans l'index de Bidule, votre store est ignoré pour lui. Quelqu'un qui a

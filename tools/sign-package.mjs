@@ -13,9 +13,11 @@ import { basename, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { gunzipSync } from 'node:zlib'
 
-// The files of a tar archive (ustar, as `tar` and npm's tar write it), by name without a leading `./`.
+// The files of a tar archive (ustar, as `tar` and npm's tar write it), by name without a leading `./`, and the
+// entries Bidule leaves out when it unpacks a package (`ignored`: links, devices, pipes; only files and folders count).
 export function untar(data) {
   const files = new Map()
+  const ignored = []
   let at = 0
   let longName = null
   while (at + 512 <= data.length) {
@@ -33,13 +35,13 @@ export function untar(data) {
       // A pax header: its `path` names the next entry.
       const path = /\d+ path=([^\n]*)\n/.exec(body.toString('utf8'))
       if (path) longName = path[1]
-    } else if (type === '0' || type === '') {
+    } else if (type === '0' || type === '' || type === '7') {
       name = name.replace(/^\.\//, '')
       files.set(name, body)
-    }
+    } else if (type !== '5' && type !== 'g' && type !== 'K') ignored.push(name.replace(/^\.\//, ''))
     at += 512 + Math.ceil(size / 512) * 512
   }
-  return files
+  return { files, ignored }
 }
 
 // Its group in the app, as Bidule's core decides it (kindOf): a mascot, a connector (a role), a module (a page).
@@ -53,7 +55,11 @@ export function kindOf(manifest) {
 
 // The package's entry in the index, signed with the private key (PEM).
 export function entryOf(data, privateKeyPem, platform = 'any') {
-  const files = untar(gunzipSync(data))
+  const { files, ignored } = untar(gunzipSync(data))
+  if (ignored.length)
+    throw new Error(
+      `Le paquet contient des liens ou des fichiers spéciaux, que Bidule ne décompresse pas : ${ignored.slice(0, 5).join(', ')}`
+    )
   const manifestFile = files.get('bidule.json')
   if (!manifestFile) throw new Error('Pas de bidule.json à la racine du paquet')
   const manifest = JSON.parse(manifestFile.toString('utf8'))
@@ -139,15 +145,22 @@ function main(argv) {
     )
     process.exit(2)
   }
-  const data = readFileSync(file)
-  const entry = entryOf(data, readFileSync(args.key, 'utf8'), args.platform)
+  const entry = entryOf(readFileSync(file), readFileSync(args.key, 'utf8'), args.platform)
   const index = existsSync(args.index) ? JSON.parse(readFileSync(args.index, 'utf8')) : null
   const url = `${args.url.replace(/\/$/, '')}/${basename(file)}`
-  if (index?.extensions?.[entry.id]?.versions[entry.version]?.packages[entry.platform])
-    console.warn(`${entry.id} ${entry.version} : son paquet ${entry.platform} est remplacé`)
+  const replaced = Boolean(index?.extensions?.[entry.id]?.versions[entry.version]?.packages[entry.platform])
   writeFileSync(args.index, `${JSON.stringify(addToIndex(index, entry, url), null, 2)}\n`)
+  // Said once the index is written: a refusal leaves the published package as it was.
+  if (replaced) console.warn(`${entry.id} ${entry.version} : son paquet ${entry.platform} est remplacé`)
   console.log(`${entry.id} ${entry.version} (${entry.platform}) → ${url}`)
 }
 
-// Run as a command, not imported (its tests).
-if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) main(process.argv.slice(2))
+// Run as a command, not imported (its tests): a refusal is said in a sentence, with the exit code 1.
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
+  try {
+    main(process.argv.slice(2))
+  } catch (error) {
+    console.error(`Impossible : ${error.message}`)
+    process.exit(1)
+  }
+}

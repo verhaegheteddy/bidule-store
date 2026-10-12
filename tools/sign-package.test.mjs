@@ -1,15 +1,16 @@
 // node --test tools/sign-package.test.mjs : the package is read, signed and indexed as Bidule checks it.
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { execFileSync } from 'node:child_process'
+import { execFileSync, spawnSync } from 'node:child_process'
 import { createHash, createPublicKey, generateKeyPairSync, verify } from 'node:crypto'
-import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { addToIndex, entryOf } from './sign-package.mjs'
 
-function fixture() {
+// `prepare` adds to the extension's folder before it is packed.
+function fixture(prepare = () => {}) {
   const dir = mkdtempSync(join(tmpdir(), 'sign-package-'))
   const src = join(dir, 'src')
   mkdirSync(join(src, 'ui'), { recursive: true })
@@ -24,6 +25,7 @@ function fixture() {
   writeFileSync(join(src, 'bidule.json'), JSON.stringify(manifest))
   writeFileSync(join(src, 'package.json'), JSON.stringify({ name: '@bidule/ext-lunar-notes', description: 'Des notes' }))
   writeFileSync(join(src, 'ui/index.js'), 'export default {}')
+  prepare(src)
   const file = join(dir, 'lunar-notes-0.2.0.tgz')
   execFileSync('tar', ['czf', file, '-C', src, 'bidule.json', 'package.json', 'ui'])
   return { dir, file }
@@ -90,6 +92,38 @@ const entry = (extra = {}) => ({
   sha256: 's',
   signature: 'x',
   ...extra,
+})
+
+test('a package with a link is refused: Bidule would leave it out', () => {
+  const { dir, file } = fixture((src) => symlinkSync('index.js', join(src, 'ui/lien.js')))
+  const { privateKey } = generateKeyPairSync('ed25519')
+  assert.throws(
+    () => entryOf(readFileSync(file), privateKey.export({ type: 'pkcs8', format: 'pem' }).toString()),
+    /liens ou des fichiers spéciaux.*ui\/lien\.js/
+  )
+  rmSync(dir, { recursive: true, force: true })
+})
+
+test('the command says a refusal in a sentence, exits with 1, and replaces nothing', () => {
+  const { dir, file } = fixture()
+  const { privateKey } = generateKeyPairSync('ed25519')
+  const key = join(dir, 'private.pem')
+  writeFileSync(key, privateKey.export({ type: 'pkcs8', format: 'pem' }))
+  const index = join(dir, 'index.json')
+  const script = fileURLToPath(new URL('./sign-package.mjs', import.meta.url))
+  const args = [script, '--key', key, '--index', index, '--url', 'https://store.test/', file]
+  execFileSync(process.execPath, args)
+  const before = readFileSync(index, 'utf8')
+  // The same version, published with other permissions.
+  const published = JSON.parse(before)
+  published.extensions['lunar-notes'].versions['0.2.0'].permissions = []
+  writeFileSync(index, JSON.stringify(published))
+  const run = spawnSync(process.execPath, args, { encoding: 'utf8' })
+  assert.equal(run.status, 1)
+  assert.match(run.stderr, /^Impossible : lunar-notes 0\.2\.0 est déjà publiée avec un autre manifeste/)
+  assert.doesNotMatch(run.stderr, /remplacé|at /)
+  assert.deepEqual(JSON.parse(readFileSync(index, 'utf8')), published)
+  rmSync(dir, { recursive: true, force: true })
 })
 
 test('a pre-release is refused: Bidule never offers one', () => {

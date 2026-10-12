@@ -1,0 +1,36 @@
+{
+  "id": "store-probe",
+  "version": "0.1.0",
+  "title": "Sonde du store",
+  "engine": "*",
+  "contributes": {
+    "commands": [
+      {
+        "id": "store-probe.greet",
+        "title": "Saluer",
+        "group": "Sonde du store"
+      }
+    ],
+    "settings": {
+      "title": "Sonde du store",
+      "fields": [
+        {
+          "key": "store-probe.name",
+          "type": "text",
+          "title": "Qui saluer",
+          "default": "le store"
+        },
+        {
+          "key": "store-probe.tone",
+          "type": "choice",
+          "title": "Ton",
+          "options": [
+            { "value": "short", "label": "Court" },
+            { "value": "warm", "label": "Chaleureux" }
+          ],
+          "default": "short"
+        }
+      ]
+    }
+  }
+}

@@ -80,9 +80,34 @@ export function entryOf(data, privateKeyPem, platform = 'any') {
   }
 }
 
-// The index with this package added (the latest version describes the extension).
+// What a published version says of itself: Bidule refuses a package whose bidule.json says otherwise.
+const MANIFEST_FIELDS = ['engine', 'dependencies', 'permissions', 'kind', 'unofficial']
+// Lists as sets, records whatever the order of their keys.
+const canonical = (value) =>
+  Array.isArray(value)
+    ? JSON.stringify([...value].sort())
+    : value && typeof value === 'object'
+      ? JSON.stringify(Object.entries(value).sort())
+      : JSON.stringify(value)
+
+/**
+ * The index with this package added (the latest version describes the extension). Refused, as Bidule's own
+ * scripts/store-index.mjs refuses it: a pre-release (Bidule never offers one), and a version already published whose
+ * manifest changed (engine, dependencies, permissions, kind, unofficial; a field the version was published without is
+ * no change). Adding another system's package to a version is allowed, and so is replacing one.
+ */
 export function addToIndex(index, entry, url) {
+  if (!/^\d+\.\d+\.\d+$/.test(entry.version))
+    throw new Error(`${entry.id} ${entry.version} : une préversion n'est jamais proposée par Bidule, publiez x.y.z`)
   const out = index ?? { schema: 1, extensions: {} }
+  const published = out.extensions[entry.id]?.versions[entry.version]
+  const changed = MANIFEST_FIELDS.filter(
+    (f) => published?.[f] !== undefined && canonical(published[f]) !== canonical(entry[f])
+  )
+  if (changed.length)
+    throw new Error(
+      `${entry.id} ${entry.version} est déjà publiée avec un autre manifeste (${changed.join(', ')}) : publiez une nouvelle version`
+    )
   const ext = (out.extensions[entry.id] ??= { title: entry.title, description: entry.description, versions: {} })
   ext.title = entry.title
   ext.description = entry.description
@@ -118,6 +143,8 @@ function main(argv) {
   const entry = entryOf(data, readFileSync(args.key, 'utf8'), args.platform)
   const index = existsSync(args.index) ? JSON.parse(readFileSync(args.index, 'utf8')) : null
   const url = `${args.url.replace(/\/$/, '')}/${basename(file)}`
+  if (index?.extensions?.[entry.id]?.versions[entry.version]?.packages[entry.platform])
+    console.warn(`${entry.id} ${entry.version} : son paquet ${entry.platform} est remplacé`)
   writeFileSync(args.index, `${JSON.stringify(addToIndex(index, entry, url), null, 2)}\n`)
   console.log(`${entry.id} ${entry.version} (${entry.platform}) → ${url}`)
 }

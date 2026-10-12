@@ -73,3 +73,40 @@ test('a key that is not ed25519 is refused', () => {
   assert.throws(() => entryOf(readFileSync(file), privateKey.export({ type: 'pkcs8', format: 'pem' }).toString()), /ed25519/)
   rmSync(dir, { recursive: true, force: true })
 })
+
+// An entry as entryOf makes it, without a package.
+const entry = (extra = {}) => ({
+  id: 'lunar-notes',
+  version: '0.2.0',
+  title: 'Lunar - Notes',
+  description: '',
+  engine: '^0.1.2',
+  dependencies: {},
+  permissions: ['shell', 'network'],
+  kind: 'modules',
+  unofficial: true,
+  platform: 'any',
+  size: 1,
+  sha256: 's',
+  signature: 'x',
+  ...extra,
+})
+
+test('a pre-release is refused: Bidule never offers one', () => {
+  assert.throws(() => addToIndex(null, entry({ version: '0.2.0-beta' }), 'u'), /préversion/)
+})
+
+test('a version already published with another manifest is refused', () => {
+  const index = addToIndex(null, entry(), 'u')
+  assert.throws(() => addToIndex(index, entry({ permissions: ['shell'] }), 'u'), /autre manifeste \(permissions\)/)
+  assert.throws(() => addToIndex(index, entry({ engine: '^0.2.0' }), 'u'), /autre manifeste \(engine\)/)
+  // The same permissions in another order are the same manifest.
+  assert.doesNotThrow(() => addToIndex(index, entry({ permissions: ['network', 'shell'] }), 'u'))
+})
+
+test('another system’s package is added to a published version', () => {
+  const index = addToIndex(null, entry({ platform: 'linux-x64' }), 'linux')
+  addToIndex(index, entry({ platform: 'win32-x64' }), 'win')
+  const { packages } = index.extensions['lunar-notes'].versions['0.2.0']
+  assert.deepEqual(Object.keys(packages).sort(), ['linux-x64', 'win32-x64'])
+})

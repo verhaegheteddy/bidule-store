@@ -36,8 +36,9 @@ Ce store peut suggérer le store d'un auteur : le champ `suggestedStores` de `in
 description, l'adresse de son index et sa clé publique. Bidule le montre dans Réglages › Stores, sous « Stores
 suggérés par Bidule », avec l'empreinte de sa clé, et l'utilisateur l'ajoute d'un clic. Rien n'est ajouté sans lui.
 Pour que votre store soit suggéré, demandez-le par une issue ou une pull request sur ce dépôt, avec ces quatre
-informations. Les sources de vos extensions doivent être publiques, et vos extensions doivent respecter les contrats
-du cœur de Bidule avec leurs propres ids.
+informations (voir « Être suggéré par Bidule » dans [docs/creer-un-store.md](docs/creer-un-store.md)). Les sources
+de vos extensions doivent être publiques, et vos extensions doivent respecter les contrats du cœur de Bidule avec
+leurs propres ids.
 
 Le store de Lunar Industries est suggéré ainsi. Ses modules `lunar-industries-*` ont d'abord été publiés ici ; un
 module installé depuis ce store le reste, sans mises à jour. Pour le reprendre depuis le store de son auteur : le

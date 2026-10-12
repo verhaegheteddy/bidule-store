@@ -15,6 +15,16 @@ Bidule accepte d'autres stores que celui-ci (Réglages › Extensions › Stores
 avec votre clé. Le guide : [docs/creer-un-store.md](docs/creer-un-store.md) ; l'outil qui signe et indexe un paquet :
 `tools/sign-package.mjs` (Node seul).
 
+## Le test de contrat
+
+`scripts/check-host.sh` lance `tests/host.spec.ts` dans l'hôte d'extensions réel du cœur de Bidule. Son sujet est
+`tests/fixtures/store-probe`, la plus petite extension que décrit le guide : un manifeste, deux réglages, une
+commande et une route. Le test vérifie que le cœur la charge comme extension communautaire et sans erreur, qu'elle
+démarre, et que sa commande et sa route répondent en lisant ses réglages. Les extensions de ce dépôt liées dans Bidule,
+s'il en a, passent les mêmes vérifications. Le workflow « Check with the store » de Bidule le lance à chaque pull
+request : un changement du cœur qui casserait ce que le guide promet aux auteurs de stores s'y voit. En local, depuis
+un checkout de Bidule où ce dépôt est cloné sous `bidule-store/` : `sh bidule-store/scripts/check-host.sh`.
+
 ## Les modules communautaires
 
 `extensions/<id>` : les sources des modules qui concurrencent les officiels (Kanban, Branches, Temps, Claude,

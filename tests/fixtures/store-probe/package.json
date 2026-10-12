@@ -1,0 +1,13 @@
+{
+  "name": "@bidule/ext-store-probe",
+  "version": "0.1.0",
+  "private": true,
+  "description": "L'extension de test du contrat entre le cœur et les extensions d'un store (tests/host.spec.ts)",
+  "type": "module",
+  "exports": {
+    "./server/*": "./server/*.js"
+  },
+  "bidule": {
+    "storeOnly": true
+  }
+}

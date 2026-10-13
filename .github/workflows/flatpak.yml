@@ -43,7 +43,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}flatpak/bidule.flatpakref
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
       - run: sudo apt-get update && sudo apt-get install -y flatpak ostree
       - name: The release's Flatpak
         env:
@@ -54,8 +56,11 @@ jobs:
         env:
           FLATPAK_GPG_KEY: ${{ secrets.FLATPAK_GPG_KEY }}
         run: sh scripts/flatpak-repo.sh dist/*.flatpak site https://verhaegheteddy.github.io/bidule-store
-      - uses: actions/upload-pages-artifact@v3
+      # The site as the script writes it: since v4, the files whose name starts with a dot (its .nojekyll) are left
+      # out unless asked for.
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
+          include-hidden-files: true
       - id: deploy
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

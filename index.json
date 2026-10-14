@@ -1078,6 +1078,22 @@
               "signature": "/PsF+Bui3LrqQEgW03YNNE38PIJX/Cz4IvKPkOL6BtXM1QfA/RT0uuQelbQPKrIQ6Fm8iF1R1VeAHcVRTYqICQ=="
             }
           }
+        },
+        "0.1.4": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/notion-0.1.4/notion-0.1.4.tgz",
+              "size": 12807,
+              "sha256": "b6099a8c34ed1f84fab3bf8eb1e084448b297ebb5378558225df02d8b3edf4c9",
+              "signature": "nw4VBU2I6S+eI1+LUPOUz8pldbiXZy7pE9VzUmw8cD7Q6BFGtomzYxejOQOuIm7yy+ZH/61Q34e+Yb8ezGjiAQ=="
+            }
+          }
         }
       }
     },

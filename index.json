@@ -76,12 +76,30 @@
               "signature": "oK31KcySsbmF9XaNYNn/mddKOsEX4dHyHZ0cAB4esTYuc1gpGqxtgcBWP6eGJPPqC5llx/8bD++k+zIFM+IHAg=="
             }
           }
+        },
+        "0.1.10": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [
+            "shell"
+          ],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/claude-0.1.10/claude-0.1.10.tgz",
+              "size": 2763011,
+              "sha256": "c4c2b9e014ad180fdce329a6b32166d546701cfe3378e82d3f04f16bd8ef0965",
+              "signature": "Qdx6BQDSTVVVCHdDrFlPartRHTvxzJ21YcHq5GGprcDfFDIbKp/Enng+TZeF7jg83Lifr8ujho2vk3SI1BFuCQ=="
+            }
+          }
         }
       }
     },
     "containers": {
       "title": "Conteneurs",
-      "description": "Conteneurs Docker et Podman : les voir, les démarrer, les arrêter, un shell ou leurs logs dans le terminal",
+      "description": "La page des conteneurs : les voir, les démarrer, les arrêter, un shell ou leurs logs dans le terminal (par Docker et Podman)",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -134,6 +152,22 @@
               "size": 17641,
               "sha256": "995935839f30acfbfbe15765ed7f2b117a6744cdb43892f67fb2f9f6903bd719",
               "signature": "+HuzJjQq6Gq92v1mielwcHl34OiTvdtcBVcCeN0viJUhZ6osuep9rkP9rgLIcGIISdb8sO2pSWyXWk2u1Y17Cw=="
+            }
+          }
+        },
+        "0.1.4": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/containers-0.1.4/containers-0.1.4.tgz",
+              "size": 14643,
+              "sha256": "64361e1184ecb7c952c04951e69aaf5d8b44f1b497862f2ed446de762f8c5a16",
+              "signature": "0pjW6mo4df+kg/abCRFeyXaV8YX7TK+mxMzYYYE4AJmqHx2XINZhK4dePLKtrf0wNndckFMQpIhEkyXrwTDqCw=="
             }
           }
         }
@@ -202,6 +236,22 @@
               "size": 16736,
               "sha256": "fd71647c3649bde02cd6107fd2964120e579ec24d19d5321a26b09c5758ebb6d",
               "signature": "mFH/NcP030Dm/zrLgFYexumbvDj0OITnAmLDSVaQVvbKyizyaVQHRN23C/VZvUnQLYfvxmiRIy2XXOT2NmJgDA=="
+            }
+          }
+        },
+        "0.5.2": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/git-0.5.2/git-0.5.2.tgz",
+              "size": 18920,
+              "sha256": "a7485881c10b2df44713aa153da1d7dd82355c98bfb78fd11abe94ad1ba5b4f4",
+              "signature": "0zgedoA+UYR2G6joynDK2WroOFz1GEFj7gzBXqgk1tqouM9Omo3TXVNh/VJHOUhLeEYnfHsJAmwT8skFnjpwDA=="
             }
           }
         }
@@ -274,6 +324,22 @@
               "signature": "bOt9OyzIi5PKfV0TbXQhMbI2o1Du2yc0xsNptqFi6rjJKm4sfgJGvhhr6p7pCAvG8U8D4G+Pwnu9+e/5d/GfBQ=="
             }
           }
+        },
+        "0.1.6": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/github-0.1.6/github-0.1.6.tgz",
+              "size": 3800,
+              "sha256": "3cbc36fb2e7c92b2482886a5cf85462e8dc15c25710e35e74c35820d6de0e6dd",
+              "signature": "xVNNHNBu4I6Fut/+gNd1jWlli9BoPF7Ak6Y+wCOiMZl8TAunaA9sj2N1pW2XO3L3gq8axWceZFQVn/OAusdmCg=="
+            }
+          }
         }
       }
     },
@@ -344,6 +410,22 @@
               "signature": "38B6J7QQ4SGTk1TJkYNaGIa14s5RmjLAA2FReto3aGjl/h5UQJm52Ed0CxziO58J4awqYkLj5RVlYFgWi4SRAw=="
             }
           }
+        },
+        "0.1.6": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/gitlab-0.1.6/gitlab-0.1.6.tgz",
+              "size": 3526,
+              "sha256": "98047abda45bd1ba5715b944c546b2876c1f77662189f3af1dfa77c1d8b41317",
+              "signature": "9zmHKjqmA7hNnboduYWtLSxS4IGJO4x/pLne0AU8OecbMtqM9+kM5TyrN4I8AKdMEh25nndMk8W19FSpsB+YAg=="
+            }
+          }
         }
       }
     },
@@ -362,6 +444,22 @@
               "size": 7615,
               "sha256": "889c737f4cc867691133da1b94c077895174b9f1a44939e2f2b1f99065600cbe",
               "signature": "T7czm39P0bT1jDDp6LT9jHiONHc+DJqLg6Tr2agj/qp94JpBDe7F6GexRpjN1s9vFq6zHaLy8F07k2JGifACAQ=="
+            }
+          }
+        },
+        "0.1.3": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-boo-0.1.3/mascot-boo-0.1.3.tgz",
+              "size": 8719,
+              "sha256": "9e005821d7bc7350c0482addbc1d54cebca12532c68e277d1f7d3727bd39ece4",
+              "signature": "wZacF9tmtGIvKb2MBeLupA1MZ+Ij6u8fhNYhmuKMd81rjHOtdVwTlOiI1PMHcnYPWn8KLHmn/W6yO7nRXh20Bg=="
             }
           }
         }
@@ -384,6 +482,22 @@
               "signature": "zTY0rVPmITJu2j9HcqRosrWYmrnXK9DFGAbUsj5SQGhBN7fs1yC+aaGmifb4FEH9s6k0NwlavwYOcqpMfR1vAA=="
             }
           }
+        },
+        "0.1.3": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-cannelle-0.1.3/mascot-cannelle-0.1.3.tgz",
+              "size": 8393,
+              "sha256": "d355f55d036b6168502a534ec96479b3ea20987d43b5b7897a23ad26f23ca657",
+              "signature": "smWgeXSjB+poLZ65pOqN+ciRbJsXqHt9AAHksDePfhke+N1TiOqJa2KHfUU8IBChtjAf0C69hMVk845hZ9pRDA=="
+            }
+          }
         }
       }
     },
@@ -402,6 +516,22 @@
               "size": 6751,
               "sha256": "a96bb7afe34648d251242c989f7258ed79e25e84f8f40258719d391fe112de28",
               "signature": "rQwAiheIIUn0YUU0hcpXzleNZVTnHbYJtDcokjA47E8lw4OH2pfIcsUrpL2KHpwqYkQO2YH1YpYjuN4A74aBBw=="
+            }
+          }
+        },
+        "0.1.4": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-capy-0.1.4/mascot-capy-0.1.4.tgz",
+              "size": 7754,
+              "sha256": "4bdc32897414574cf412805cbe6d25187c110f15f45fcd8a3343cbee60149192",
+              "signature": "1eSLcf3T1mxUwCgVPmHb+FjgUdLzEgYkYiXMtvnb9kLgwJCGkiiFwQZ3m1v3FKDm9XM9MkHjgwLx1XRpLentBw=="
             }
           }
         }
@@ -424,6 +554,22 @@
               "signature": "T3FYWtY9GAYmezGBu6gIHSul3mAWc7jA7mmBGXpFIr9de4KFB2WYej/jQek+GcCpq51MTkml/nnoYB8xZtMNDw=="
             }
           }
+        },
+        "0.1.3": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-coincoin-0.1.3/mascot-coincoin-0.1.3.tgz",
+              "size": 10195,
+              "sha256": "e00222a173941e9c1091a0505d36660fdf218968b6018beed9287f79c685985e",
+              "signature": "Ms6EIjQUPKsYAy24UbuBh9djW06C+EKGTbp1ejPG7OQ7Nd6ZIj9TJnsuV2mP7XC8/JyVpYNNhkiPj7KOOb0hCw=="
+            }
+          }
         }
       }
     },
@@ -442,6 +588,22 @@
               "size": 6227,
               "sha256": "218fa60af6de607c92c8f53106692769f2049af83b3a040101228f226bd3041b",
               "signature": "4XAuMQYaij3pDPs3nXNXmvkODY3NpUqeexb/UB/rxgeUWqrxfvIcIkp9hRZ7A25E4t4tGSdzUZQr9Wpl9XJgAw=="
+            }
+          }
+        },
+        "0.1.2": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-dragon-0.1.2/mascot-dragon-0.1.2.tgz",
+              "size": 6400,
+              "sha256": "d4e1c9fccac4249edf17d1eb7de45bc32c774c04e3b3e4e1241464778367c3e5",
+              "signature": "I7guXG+CsGD45o55eVFOqOb9ZgEfQAANBZBqYeaOLuQWEnr0Hd7y3j7DPixG8WHKSj3jUiACj33QRoUKBFyjAA=="
             }
           }
         }
@@ -464,6 +626,22 @@
               "signature": "cDfDN90urW/69fh3GmqbJ9vEnIqVRGQrotb/XtKUFPwJVXx89fctSwbGW+/kfRwpIEmyeEOEtSB8xuYIxoneDQ=="
             }
           }
+        },
+        "0.1.3": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-kenji-0.1.3/mascot-kenji-0.1.3.tgz",
+              "size": 7733,
+              "sha256": "40cf064ebdd895881e486c4eac64b19ad80a90684e20da66a1d00477904e9c96",
+              "signature": "EG6Akf1CwJ2B8EH1GnBVOQYF63qXQ/i2UyNYi9QGbQ0j6gvXacZopb4+jiK4sQGT3WHjuCp/ASUwGAm2INeCBA=="
+            }
+          }
         }
       }
     },
@@ -482,6 +660,22 @@
               "size": 4646,
               "sha256": "ab3988d6f13a6a1ebc6ad887e40fc074c7c496222766b262e8ea6cef19fb343f",
               "signature": "mHa5WM6wWW6vWHh+TvlJe4UB5NtRh0SKNBef6VJPOFZCD3nUp9wqRoasQraeS4cToCDM8M6JdvkD0txO/H8MDA=="
+            }
+          }
+        },
+        "0.1.3": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-mako-0.1.3/mascot-mako-0.1.3.tgz",
+              "size": 5659,
+              "sha256": "dd62321f20795051c60482373e0f59fd11bb5e66ada7eac09fccff66d1cd8db5",
+              "signature": "nIUrQaVaW00OWrimDYuowxei+mfK5cZFfKvT1Xhyg+ms94BLeBEyBvTPXMPs+48wHMk1b9zQwZEd7dz+Yw3QAQ=="
             }
           }
         }
@@ -504,6 +698,22 @@
               "signature": "trmon19mFqQrkCDTa7aJ0sUGo/iiuET/U9O9ws5T6k9MLSMypF/RPWbvr6WKUqI0KcwY11QnX5KRjPdzHhrzDQ=="
             }
           }
+        },
+        "0.1.3": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-nox-0.1.3/mascot-nox-0.1.3.tgz",
+              "size": 10776,
+              "sha256": "05114c7d8c48931c52f3114923353ea429932fbb4e860ca90ecf152e6f40b463",
+              "signature": "obQScqlPLL9kfhjbvJjaYBCv236MHmPFyzEANFGJAl89NIW6xbaA77c+GuO4WFXMT9YFikX00yQYmuL1ORsvDA=="
+            }
+          }
         }
       }
     },
@@ -522,6 +732,22 @@
               "size": 6074,
               "sha256": "c72b979b15d4ec277029d66e400840e7b307bb3453270b9e8892e6f4131ea9bb",
               "signature": "S5MmnWY05HxpwlKfdkQEjrTs8/lmMhz0hAU6iyt9rhtDQ0lTXuwqPNO/VtScVN3O2Gd2Vpx/lNvC/BNKfKeHBw=="
+            }
+          }
+        },
+        "0.1.3": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-octo-0.1.3/mascot-octo-0.1.3.tgz",
+              "size": 6970,
+              "sha256": "60ad67e5fdd16f93bdd7fa16f7cb6d02ee6ecf5ed7a62913327463dcccb6a502",
+              "signature": "R0bMwEw2CYmGoBzf/KklZySwcmx0/FdKtBfaQ2KoDf5vFKgTCNZxmAEKtTUq98cLR2nYeNhpqvus/YOFAu5GDQ=="
             }
           }
         }
@@ -544,6 +770,22 @@
               "signature": "nEoH7kLzHpz6nUf+on7hrbaO0slr/IrjuCg57fOXWTI1SK/RtoyzL+364YoGsCJB6Hht0Zhb1f+XsDlDFNzaAw=="
             }
           }
+        },
+        "0.1.3": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-pip-0.1.3/mascot-pip-0.1.3.tgz",
+              "size": 7008,
+              "sha256": "6de9b964b8a4530315c285ce45a50fa579563ef43c4571ec93005f91b521358c",
+              "signature": "TYJWZqTkaSCYYIMhk3H/bRHc8XJrxNkNefKrNoSs7zcVT/SLvwrqlVwtoN7HEGaCuJv/intmPVm0dR3cgl/9Ag=="
+            }
+          }
         }
       }
     },
@@ -564,6 +806,22 @@
               "signature": "eQpiSESUO7Se11ib7+xtlM8t9rhGkGF3WAgoMhMGHGZaniLwV4X4MjVmJYDSaKIB++DZBe9pCZRj0FU8nWWXAQ=="
             }
           }
+        },
+        "0.1.3": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-robot-0.1.3/mascot-robot-0.1.3.tgz",
+              "size": 6756,
+              "sha256": "7c47a5eaa8db4584ed5c31240d87528447369e76bec835cec16fedd9dccd41b9",
+              "signature": "xwfOZGy7yfn0yf3U4p46IU/E+495JhAuMJVqWWFMk6bOP1lPQ/mOnIH0qKOmgqE2KVna7GOTMwC1FWFSqo4bDA=="
+            }
+          }
         }
       }
     },
@@ -582,6 +840,22 @@
               "size": 6397,
               "sha256": "b4d67d82989a196c7d07533d9c7b4037b102395fe33fcf5af9de817a9739d34f",
               "signature": "gBv1CT6lA1cfePp65Hlz856BJsDbChSof7Rwt8Tk+ArNpS6QC3/MIlKl8fu+bdea6VwvMxBZ3i7SISt0yFgdAA=="
+            }
+          }
+        },
+        "0.1.3": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-sprout-0.1.3/mascot-sprout-0.1.3.tgz",
+              "size": 7335,
+              "sha256": "ffdfdaa36e501b0aae4c1c58289afc956c175f119466e80b7c32178fd14aba53",
+              "signature": "b22EpDvo2I47y7ORWM4F2YtOPpM0rXucHz3WGoI+fBzN9E/ueojCF2O3ikXdC5gxbsOPHjT8nhbm+uxkLq6mBw=="
             }
           }
         }
@@ -708,6 +982,34 @@
               "signature": "0qhxaqsZfZyqsZl+04MadyRJoY/2BiPq1hr5wOkFQ/1IwTddsyvSxK2aE1AyyLhdWwBESJkwBBMcP6vC8yASBg=="
             }
           }
+        },
+        "0.2.4": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "win32-x64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/matrix-0.2.4/matrix-0.2.4-win32-x64.tgz",
+              "size": 9297847,
+              "sha256": "bb47e21acfbd09aed5d5393ac20a83a6dbbe81e11b51ee7f787402f92c9c9454",
+              "signature": "i68UXh7uqcuVhUymQxo65GwcWJknrLuN/CLkk623ijqdBff4P/HGDJbhVk0eeFPEGJcoob5XGuZRhAnS7PdEAw=="
+            },
+            "linux-x64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/matrix-0.2.4/matrix-0.2.4-linux-x64.tgz",
+              "size": 10418638,
+              "sha256": "d31e65a5093b05bf6d7a8b7111eb335b7285bcf228a5fd1aa6dd8dc839c21088",
+              "signature": "SitAoBtIYJllN2A7NaA/nY5hnI/938b6LfekMTfBVaUp75VhZEwDC3MHtSiJYdcIev7D00QPD0Ne73OvSljlBg=="
+            },
+            "darwin-arm64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/matrix-0.2.4/matrix-0.2.4-darwin-arm64.tgz",
+              "size": 8603395,
+              "sha256": "73454798984a9430a7474b919cf2074816417f15418a32f835927c0bd5db5792",
+              "signature": "aHa+OeJ1/BjwK1zgBhmMulBbZ6XdcGMrD5+cQkXE+Kk6e0KmHDAQWvuCkVJOsxQQOY8LFb/9uhoYnwHG5GFqBQ=="
+            }
+          }
         }
       }
     },
@@ -758,6 +1060,22 @@
               "size": 9910,
               "sha256": "d53518023e3dd2b7a8c450731bafe1ade7ff4d2f2b98b3202eaf20a280f61c75",
               "signature": "Xl9YDfFYcgo5pXIeY113ksFZeIAdPkWdn0s9+Q59oeRQKSSNdZtdUSATkIFINHnSPPZEYYU1YGvXvc7q4FWhAg=="
+            }
+          }
+        },
+        "0.1.3": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/notion-0.1.3/notion-0.1.3.tgz",
+              "size": 11535,
+              "sha256": "7f3027a5d3adfe7fe91afae1a58a8c234841b155dd08044f9f0529895ab3cd48",
+              "signature": "/PsF+Bui3LrqQEgW03YNNE38PIJX/Cz4IvKPkOL6BtXM1QfA/RT0uuQelbQPKrIQ6Fm8iF1R1VeAHcVRTYqICQ=="
             }
           }
         }
@@ -828,6 +1146,22 @@
               "size": 14311,
               "sha256": "7e86fad244211c83a065a1281cea0f003d5ed278fb45a5341fc04ed3e4195a66",
               "signature": "SCVSQZ2U4hnnU7rImTISnIE/UAdaHtGFN3Nya2ps4UPk82bgetro89x2bjo6A3jeH/+tdkBFc8yv0tspQPLXCg=="
+            }
+          }
+        },
+        "0.1.5": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/temps-0.1.5/temps-0.1.5.tgz",
+              "size": 15837,
+              "sha256": "4938fcf84e52e88139bc54cfaa3eecdac7fae3ca2b4f46ddf804a2192b73079c",
+              "signature": "lBsSvXYZM+RBmaSAPUwjw7jeTQJyOsSTVPnpS/K1QBM0Qp/jAmlLLxeaklGEp2vsCGLvTR7s+qLIkDJTLcaGBg=="
             }
           }
         }
@@ -972,6 +1306,24 @@
               "signature": "W70AQtYVx7U3vPU/oU/GEMYTl2/z5+hvHF97zvm11WdEqkVq6oiHsnIbAuasYs1FB82sVIqYuSH70jZqhCiVBA=="
             }
           }
+        },
+        "0.1.17": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [
+            "shell"
+          ],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/terminal-0.1.17/terminal-0.1.17.tgz",
+              "size": 1785642,
+              "sha256": "621690701fe022865774b1bfcee831fd5132ca1ddf1abc1798069ab87825be6d",
+              "signature": "423tvxsjcxsQExVw7rEPL/lHrnMydZ8VwAyvjW8H09l+Pyf6P9zACojn9YmReF/+pmNomH4LoEQzap/YGCVmCA=="
+            }
+          }
         }
       }
     },
@@ -1008,6 +1360,22 @@
               "size": 34863,
               "sha256": "273997dcff749975c100db4dfa01e975c2a5815387aca1e00090b0c937c24fd9",
               "signature": "keHRKxFD38RlhpCc34Mfh5OuUvMeCP5M3JF1x7zLfKGv1Odz0O6VaQOvWuJmy++MlnE+gF1lce+RfdqN2x0WCw=="
+            }
+          }
+        },
+        "0.2.8": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/branches-0.2.8/branches-0.2.8.tgz",
+              "size": 36326,
+              "sha256": "062986c96218104bfb8c48eb9a0132004b692d7d395480b7c0ccf66fd4f79414",
+              "signature": "vTl2AwjM/biyXTndXInWZRCIDp0sILy9tfsdk+fYCTwUCxuoFcRYCfhMPhtT1gbyyWqCMuELmswMv9oHFo1eCQ=="
             }
           }
         }
@@ -1048,6 +1416,22 @@
               "signature": "lK53fRlnNTyYx0oNwgi+UWecVfYMe1lekhFRfEp+q+vQl8UvePXZrsqlpWMCZvFm1jraW8AMeLheFUOOA0PCCQ=="
             }
           }
+        },
+        "0.2.0": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/kanban-0.2.0/kanban-0.2.0.tgz",
+              "size": 9638,
+              "sha256": "33d7f7a120682d07cfe6be2a21aec3f61151a2856a582b3edd51b0dccef06747",
+              "signature": "MZsZIyKlAb2SNtKEiwd52mlTyvMEUKh8PJZz/YdTJui10JwRTvp3kHoNz44BAvzZ4VMP1bBznr91DXJNTlGgAA=="
+            }
+          }
         }
       }
     },
@@ -1068,6 +1452,22 @@
               "size": 8816,
               "sha256": "12c16cbd823dbb802911cfda7fa8366fbf984adcc522524f4e5eed02eaa4a4a8",
               "signature": "H1GtREAGqYlVZbt3iUDeUo0SuqdzEasiVqHu/sji1SB/r8xNbGtr/Md7CXAYZp5nBCskZvsAyNr9258amKJ3BQ=="
+            }
+          }
+        },
+        "0.1.3": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-clo-0.1.3/mascot-clo-0.1.3.tgz",
+              "size": 9442,
+              "sha256": "e72cb80bc1a9348dce3e3274fea24bce6a56046167480e369daccee08892ba80",
+              "signature": "s0HEWysTVM+KXqq4mdRhGvn3iEMQO+jaclVuwU13SLZZc1z2ro75QPvmoOn7KULThryotKq/PbLO9VRHO8KoAA=="
             }
           }
         }
@@ -1092,6 +1492,22 @@
               "signature": "jGmsiIK7bwedMCxu9qrIWdV6UHGx23oe2XhXwlATLitrFU2DizF+iLWZgQ1Lw8EiDQCAXIkeX3qR6aUJTCDVAw=="
             }
           }
+        },
+        "0.1.3": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-clo-ombre-0.1.3/mascot-clo-ombre-0.1.3.tgz",
+              "size": 9622,
+              "sha256": "b37cc1e2cd20c89cf61a171f12e5aa546a297a19d3dffae59016feeeb03cdd7a",
+              "signature": "Ad8xxo8qSoEsSUq7PIx3qahdJCnNJZKZfATT9GvEXejceOSfemWVq7M8GXhMJJ5zs+dZ0Qd10elwhpEWkrB1AA=="
+            }
+          }
         }
       }
     },
@@ -1114,6 +1530,22 @@
               "signature": "dEi1nmud3pxBWJILh1agpO2nvUx5kyIMbmmAUFS8Cxiy4Nvh+poNeC+Y4xE+xxMAgsdpBteQrbGgyOCG2sZfBw=="
             }
           }
+        },
+        "0.1.3": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-kero-0.1.3/mascot-kero-0.1.3.tgz",
+              "size": 7204,
+              "sha256": "b5c480bd818f456e1cc4d855f81cd3ddc0486a5a816b332a72f6b1c4ee4ae5a8",
+              "signature": "GiNJOF1sRhhKGjtEv+RwX2g2ptIpXFHC+zJ7qk79ISFcz/fP1uWKyT5lFujDfuUDrJCpyZWgkfCaiGiAtNV4Bw=="
+            }
+          }
         }
       }
     },
@@ -1134,6 +1566,92 @@
               "size": 6786,
               "sha256": "2187c4a02f47110833ee593a51e2b9cc4281452d6a653eef5a27e7150c21ac97",
               "signature": "j3T3q0X75t7E75vWrCh6lEtvcK/d98hvLW+F9rFl0UYcGFzpMCeDYDojUGg5Jubchi+Dw38acc56b1elXZc+Ag=="
+            }
+          }
+        },
+        "0.1.3": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "mascots",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/mascot-kuma-0.1.3/mascot-kuma-0.1.3.tgz",
+              "size": 7400,
+              "sha256": "773907f427c94dbce683f881e26ffd27e2a451c21129f9b354e6e4d65b8af1cb",
+              "signature": "aJFnXH9noLQO5uWIkke7pdGvTLsFCCNH0p9pWl/SGp5ql55MrX+OnvWo4Tm2WZf4z0zGA786FtwX9ZD37LjZDA=="
+            }
+          }
+        }
+      }
+    },
+    "agents": {
+      "title": "Claude",
+      "description": "La page Claude : les dossiers des tâches, les conversations de Claude Code, leur reprise et leur plan",
+      "versions": {
+        "0.1.2": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/agents-0.1.2/agents-0.1.2.tgz",
+              "size": 26725,
+              "sha256": "aa1bb651af4eb7288b6f13416996a8b7041785ee2aad418709e6964c54a49673",
+              "signature": "g6c8p1tYTR5wtPn3hQD7gVRd8m56qxdaPRxykO+sgio4KFaZT353TCq9GH6K2fJpeSSl4Q4SvhWF6Klm6ZOMDQ=="
+            }
+          }
+        }
+      }
+    },
+    "docker": {
+      "title": "Docker et Podman",
+      "description": "Docker et Podman par leur ligne de commande : les conteneurs, leurs actions, le détail, les fichiers, les journaux et les ressources suivis, un shell ou leurs logs dans le terminal",
+      "versions": {
+        "0.2.1": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [
+            "shell"
+          ],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/docker-0.2.1/docker-0.2.1.tgz",
+              "size": 8908,
+              "sha256": "a3c3490799ff146f2f3aec1893743fe93937ea03a7a9cf11693d55aaaed0e045",
+              "signature": "wqlbJ3fzV4iGBTxr3wpayMS9Rc7O6ruz/Ck1WZdzy4+MA+AaWONk72cl4KHEV3aNlbQJefLMss5ki+fEc2xBBw=="
+            }
+          }
+        }
+      }
+    },
+    "messages": {
+      "title": "Messages",
+      "description": "La messagerie : conversations, conversations de tâche, clins d'œil et visios, par le connecteur Matrix",
+      "versions": {
+        "0.2.2": {
+          "engine": "^0.3.0",
+          "dependencies": {
+            "matrix": "^0.2.0"
+          },
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": false,
+          "released": "2026-10-14",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/messages-0.2.2/messages-0.2.2.tgz",
+              "size": 67836,
+              "sha256": "2a29d490350b74f6598119385da3e5be31555e6d57e3f7031ee47bd64f663e81",
+              "signature": "3QtC0+tD85vOK+vlo4/GNQgaCE7vvcd3l8fX4nQjrKA3MYeFB6Z1O4zmavqVVBQYqxYhWtjutrF97PFKi//cDA=="
             }
           }
         }

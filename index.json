@@ -1646,6 +1646,24 @@
               "signature": "wqlbJ3fzV4iGBTxr3wpayMS9Rc7O6ruz/Ck1WZdzy4+MA+AaWONk72cl4KHEV3aNlbQJefLMss5ki+fEc2xBBw=="
             }
           }
+        },
+        "0.3.0": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [
+            "shell"
+          ],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-15",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/docker-0.3.0/docker-0.3.0.tgz",
+              "size": 9184,
+              "sha256": "5f030327f26f3d682d4d2eef8d363f82eb4dffe1ce018dfaeae39e5048b0d0cb",
+              "signature": "Od3qqJj6aSIaJbp8t8RpbD2lsOF6N2nOaoIJw8TszfaStaPhPuLbOZg1br5/SEXMCXHGult7eCQLs7F0nHYtDg=="
+            }
+          }
         }
       }
     },

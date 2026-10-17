@@ -1340,6 +1340,24 @@
               "signature": "423tvxsjcxsQExVw7rEPL/lHrnMydZ8VwAyvjW8H09l+Pyf6P9zACojn9YmReF/+pmNomH4LoEQzap/YGCVmCA=="
             }
           }
+        },
+        "0.1.18": {
+          "engine": "^0.3.0",
+          "dependencies": {},
+          "permissions": [
+            "shell"
+          ],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-17",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/terminal-0.1.18/terminal-0.1.18.tgz",
+              "size": 1785797,
+              "sha256": "58f45e2d5c6d3503fa165103b30ef5cc163c640b6df5e704182e798f5578ccff",
+              "signature": "HHfRHtpaXDhZ6vSPJNQrxMdfF8IUlEVGEAHQ3bqy/NCRHHOMMIU8YUeAyHfj2Q3piiHc3PZE3g+YuFM7OgD3Bw=="
+            }
+          }
         }
       }
     },

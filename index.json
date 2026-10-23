@@ -3,7 +3,7 @@
   "extensions": {
     "claude": {
       "title": "Claude Code",
-      "description": "Claude Code sur une tâche : ses branches en worktrees, le mode plan dans le terminal, le plan publié",
+      "description": "Le moteur des agents pour Claude d’Anthropic, par l’Agent SDK et le Claude Code de l’environnement des outils ; les messages de commit de la page Git",
       "versions": {
         "0.1.0": {
           "engine": "^0.1.0",
@@ -92,6 +92,36 @@
               "size": 2763011,
               "sha256": "c4c2b9e014ad180fdce329a6b32166d546701cfe3378e82d3f04f16bd8ef0965",
               "signature": "Qdx6BQDSTVVVCHdDrFlPartRHTvxzJ21YcHq5GGprcDfFDIbKp/Enng+TZeF7jg83Lifr8ujho2vk3SI1BFuCQ=="
+            }
+          }
+        },
+        "0.2.0": {
+          "engine": "^0.3.3",
+          "dependencies": {},
+          "permissions": [
+            "shell"
+          ],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-23",
+          "packages": {
+            "win32-x64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/claude-0.2.0/claude-0.2.0-win32-x64.tgz",
+              "size": 143464034,
+              "sha256": "77f9bbce1654e30f1c3eb803ae658e712dc33ca57d9542d03fbebd30998fa4ea",
+              "signature": "lw8yPn3s4ragdFxWTNC6LinIS6MEcaFZcnQAoQKnvkVGG/Remi4VnEk+epxKwSBfZvC6NAtc0qo4mtSJBOrEDg=="
+            },
+            "linux-x64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/claude-0.2.0/claude-0.2.0-linux-x64.tgz",
+              "size": 139613291,
+              "sha256": "68305c077715de8647ddb9d7ee045e294ee7c4c3b7b3ca2210dff0d54f5b47ad",
+              "signature": "lbsB6y/61Qi1vv8+U+iunkCWLShYRJ4I47gaD6lrrITqtTbYD0BGHtbbUC1hIk8K52JP+mJloRF4SAW/PUadAA=="
+            },
+            "darwin-arm64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/claude-0.2.0/claude-0.2.0-darwin-arm64.tgz",
+              "size": 129775302,
+              "sha256": "5534298f1cb1c9e793c838879a8362b75fa69b52f3fdae6d9e628242074bc6ae",
+              "signature": "pQosxHqS0crm9wGp1ugBntV/J2XhuVnWVZXPuAwlCwCIn8eNFSF8gsKlCcfLAtVoftRG2Z3oHu9kSkCNYe9KDQ=="
             }
           }
         }
@@ -1010,6 +1040,34 @@
               "signature": "aHa+OeJ1/BjwK1zgBhmMulBbZ6XdcGMrD5+cQkXE+Kk6e0KmHDAQWvuCkVJOsxQQOY8LFb/9uhoYnwHG5GFqBQ=="
             }
           }
+        },
+        "0.3.0": {
+          "engine": "^0.3.3",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "connectors",
+          "unofficial": false,
+          "released": "2026-10-23",
+          "packages": {
+            "win32-x64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/matrix-0.3.0/matrix-0.3.0-win32-x64.tgz",
+              "size": 9302681,
+              "sha256": "b70e335cb0bc17c0b16d23ae6b878a87725ce56f58c519f3f4ae13fb85d6b212",
+              "signature": "g0bKiDzC6rzBzbXZpcf4CFHDTz9/veTasplthduji9B+gonluWJ5BLHCNNbBo5610lAMSoJYUr+qSORAE/hTCw=="
+            },
+            "linux-x64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/matrix-0.3.0/matrix-0.3.0-linux-x64.tgz",
+              "size": 10422888,
+              "sha256": "a6bcadc570c43232d32be03ac962df5df018fd33d03cbd2b96ca46279c962bac",
+              "signature": "mjlQPFdul09ITGj3bceAmlzAvZXnIucCF8BWt5Cy2zR06treQEUlxuv7mwjxZ/zg3JKSmiZb64aet6KeY04EDA=="
+            },
+            "darwin-arm64": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/matrix-0.3.0/matrix-0.3.0-darwin-arm64.tgz",
+              "size": 8608781,
+              "sha256": "71372b7246b2c8193f7ee04beae81e5eec48c6ce9b5355c90bf75b3467424815",
+              "signature": "wQmF8ejEiS8Bw3tcrgp7ty9PiOViqwea/R0NPKnfapZu8VIQ+p30iReNG6UrDaQp6VUQ9QyB8yxU7uB3cwDLAw=="
+            }
+          }
         }
       }
     },
@@ -1622,8 +1680,8 @@
       }
     },
     "agents": {
-      "title": "Claude",
-      "description": "La page Claude : les dossiers des tâches, les conversations de Claude Code, leur reprise et leur plan",
+      "title": "Agents",
+      "description": "Des agents nommés qui travaillent sur les tâches, tagués dans leur conversation",
       "versions": {
         "0.1.2": {
           "engine": "^0.3.0",
@@ -1638,6 +1696,22 @@
               "size": 26725,
               "sha256": "aa1bb651af4eb7288b6f13416996a8b7041785ee2aad418709e6964c54a49673",
               "signature": "g6c8p1tYTR5wtPn3hQD7gVRd8m56qxdaPRxykO+sgio4KFaZT353TCq9GH6K2fJpeSSl4Q4SvhWF6Klm6ZOMDQ=="
+            }
+          }
+        },
+        "0.2.0": {
+          "engine": "^0.3.3",
+          "dependencies": {},
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": false,
+          "released": "2026-10-23",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/agents-0.2.0/agents-0.2.0.tgz",
+              "size": 32083,
+              "sha256": "ceb7618c4d26df037393528854ac9363d108d841aeb850d6bf716f78d5ed32e0",
+              "signature": "pONwK1uHBY+LfmeOBDLMOw8+IIXFfoM3nKcvD+93UszWBNepwoOLoNwt2oAkz7331usVNFJFoiBVbpBgmPCxBA=="
             }
           }
         }
@@ -1704,6 +1778,24 @@
               "size": 67836,
               "sha256": "2a29d490350b74f6598119385da3e5be31555e6d57e3f7031ee47bd64f663e81",
               "signature": "3QtC0+tD85vOK+vlo4/GNQgaCE7vvcd3l8fX4nQjrKA3MYeFB6Z1O4zmavqVVBQYqxYhWtjutrF97PFKi//cDA=="
+            }
+          }
+        },
+        "0.3.0": {
+          "engine": "^0.3.3",
+          "dependencies": {
+            "matrix": "^0.3.0"
+          },
+          "permissions": [],
+          "kind": "modules",
+          "unofficial": false,
+          "released": "2026-10-23",
+          "packages": {
+            "any": {
+              "url": "https://github.com/verhaegheteddy/bidule-store/releases/download/messages-0.3.0/messages-0.3.0.tgz",
+              "size": 72662,
+              "sha256": "9c6acd3ed02e5e448ff8a8d2ebd1f69632b6abe796027c2afb66177a7456b2ed",
+              "signature": "Sls0rySHpbCbZ/c8tzlLJsAFTZmbB1qKf9xPcuh5//704e1lzfB1qnCAcfAigPhCcNoFScDnVOP5lbG6Y+I2Cw=="
             }
           }
         }
